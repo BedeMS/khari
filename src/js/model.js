@@ -2,33 +2,31 @@ import "regenerator-runtime/runtime";
 import products from "./products/products";
 import uniqid from "uniqid";
 import { getObjects, sum } from "./helpers";
+
 export const state = {};
 
 // this function shows state based on session
 export const persistState = function () {
+  // Update State based on storage
   for (let i = 0; i < sessionStorage.length; i++) {
     let key = sessionStorage.key(i);
-    // if (state[key] === "product") {
-    //   state[key] = sessionStorage.getItem(JSON.parse(key));
-    // } else {
     state[key] = sessionStorage.getItem(key);
-    // }
   }
 
   let { category, selection } = state;
   if (!category && selection) {
+    // Loop through Khari's Products
     for (let key in products) {
-      // console.log(key);
+      //Loop through every category, key = category
       for (let property in products[key]) {
-        // console.log(property);
+        // if property is in this category, then set it in the state
         if (property === selection) {
-          state.category = key;
           updateState("category", key);
-          console.log(category);
           return;
-        } else {
-          continue;
-        }
+        } 
+        // else {
+        //   continue;
+        // }
       }
     }
   }
@@ -104,9 +102,9 @@ export const productData = function () {
 export const updateState = function (item, val) {
   sessionStorage.setItem(item, val);
   persistState();
-  // console.log(state);
 };
 
+// Loop through storage and delete everything except for our Cart
 export const clearState = function () {
   for (let key in sessionStorage) {
     if (key !== "cart") {

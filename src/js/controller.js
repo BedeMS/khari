@@ -13,6 +13,17 @@ if (module.hot) {
   module.hot.accept();
 }
 
+
+// update state category
+const controlCategory = function (category) {
+  // Clear storage expect for Cart
+  model.clearState();
+
+  // Update session storage on Users choice
+  model.updateState("category", category);
+};
+
+
 //  Receive what product the user want to see
 const controlSelection = function (product) {
   // update info to state
@@ -26,15 +37,6 @@ const controlSelection = function (product) {
 
   // Render Page
   // productView.render(productData);
-};
-
-// update state category
-const controlCategory = function (cat) {
-  // except for cart
-  model.clearState();
-
-  // update state on user choice
-  model.updateState("category", cat);
 };
 
 const controlProductSizes = function (size, element) {
@@ -99,29 +101,28 @@ const controlRenderCheckout = function () {
   window.location.assign("http://localhost:1234/checkout.html");
 };
 
-// Checkout
-// const controlCheckout = function () {};
-
 const controlNavigation = function () {
   navigationView.toggleNav();
 };
 
 const init = function () {
-  // Not Able to click on anything on Checkout
-  // checkoutView.addHandlerCheckout(controlCheckout);
+  // Cart Specific View
   cartView.addHandlerRender(controlCart);
   cartView.addHandlerDeleteItem(controlDeleteCart);
   cartView.addHandlerUpdateQuantity(controlUpdateQuantity);
   cartView.addHandlerRenderCheckoutForm(controlRenderCheckout);
-  // cartView.addHandlerRender(controlDeleteCart);
+
+  //Cart + Nav View
   addToCartView.addHandlerRender(controlCartIcon);
   navigationView.addHandlerNav(controlNavigation);
-  selectionView.addHandlerSelection(controlSelection);
+
+  //Category + Selection of Product Views
   categoryView.addHandlerCategory(controlCategory);
-  //Product Specific
+  selectionView.addHandlerSelection(controlSelection);
+
+  //Product Specific view
   productSizesView.addHandlerProductSizes(controlProductSizes);
   productColorsView.addHandlerProductColors(controlProductColors);
   addToCartView.addHandlerAddToCart(controlAddToCart);
-  // CheckOut View
 };
 init();

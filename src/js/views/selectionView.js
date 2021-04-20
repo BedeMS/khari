@@ -3,7 +3,7 @@ import View from "./View";
 class selectionView extends View {
   _parentElement = document.querySelector(".main-selection");
   _selection = document.querySelectorAll(".selection");
-  //   _product = document.querySelectorAll(".selection__title");
+  
 
   addHandlerSelection(handler) {
     this._selection.forEach((el) => {
