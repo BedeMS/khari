@@ -1,0 +1,133 @@
+// Index Main Page
+.main {
+  height: 100vh;
+  width: 100vw;
+  background: #000000;
+  text-align: center;
+  position: relative;
+
+  &__heading {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 8rem;
+    &-desc {
+      @include fontSm;
+      letter-spacing: 1rem;
+      margin-bottom: 5rem;
+    }
+
+    &-title {
+      font-size: 20rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5rem;
+    }
+
+    & p {
+      color: white;
+    }
+  }
+
+  &__half {
+    position: relative;
+    display: block;
+    background: $color-dark-1;
+    width: auto;
+    height: 100%;
+    clip-path: polygon(
+      44% 0,
+      41% 3%,
+      40% 5%,
+      40% 7%,
+      40% 9%,
+      41% 12%,
+      41% 13%,
+      42% 15%,
+      43% 16%,
+      44% 18%,
+      45% 20%,
+      46% 22%,
+      47% 23%,
+      49% 26%,
+      50% 27%,
+      52% 29%,
+      53% 31%,
+      54% 32%,
+      55% 34%,
+      56% 37%,
+      57% 39%,
+      57% 42%,
+      57% 45%,
+      57% 48%,
+      57% 50%,
+      56% 53%,
+      56% 55%,
+      55% 58%,
+      54% 60%,
+      53% 63%,
+      51% 66%,
+      49% 69%,
+      47% 70%,
+      45% 72%,
+      42% 74%,
+      40% 76%,
+      38% 78%,
+      35% 80%,
+      32% 82%,
+      29% 83%,
+      27% 85%,
+      23% 87%,
+      20% 88%,
+      17% 89%,
+      15% 90%,
+      14% 90%,
+      12% 91%,
+      10% 91%,
+      8% 92%,
+      6% 93%,
+      5% 93%,
+      4% 94%,
+      3% 95%,
+      2% 96%,
+      1% 98%,
+      0% 99%,
+      0% 100%,
+      100% 100%,
+      100% 0% 
+    );
+
+    &-img {
+      position: absolute;
+      bottom: 0;
+      right: 10%;
+      height: 90%;
+    }
+  }
+}
+
+.promo {
+  height: 4rem;
+  width: 100vw;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  &-box {
+    height: 100%;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & a {
+      @include fontSm;
+      color: #fff;
+    }
+
+    &:first-of-type {
+      border-right: white 2px solid;
+    }
+  }
+}

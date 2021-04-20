@@ -1,0 +1,118 @@
+.main-man {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  background-color: $color-light-3;
+}
+
+.featured {
+  width: 60%;
+  height: 100%;
+  background: $color-light-3;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &__img {
+    height: 95%;
+    align-self: flex-end;
+  }
+
+  &__item {
+    height: 12rem;
+    width: 23rem;
+    background: #ffffff;
+    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    transition: all 0.5s ease-in;
+
+    &:hover {
+      background-color: rgba($color-light-2, 0.9);
+      color: #ffffff;
+    }
+    &:hover .featured__item-btn {
+      transform: rotate(360deg);
+    }
+
+    &-title {
+      @include fontMd;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    &-price {
+      @include fontMd;
+    }
+
+    &-btn {
+      position: absolute;
+      bottom: 10%;
+      right: 20%;
+      z-index: 10;
+    }
+  }
+}
+
+#featured_1 {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+}
+
+#featured_2 {
+  position: absolute;
+  bottom: 5%;
+  left: 60%;
+}
+
+// Categories Selection
+.categories {
+  width: 40%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: $color-light-3;
+}
+
+.category {
+  width: 40%;
+  height: 20%;
+  // background-color: $color-light-2;
+  background-color: rgba(#ffffff, 0.1);
+  border-left: 0.25px solid #ffffff;
+  border-right: 0.25px solid #ffffff;
+  border-bottom: 0.25px solid #ffffff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+
+  &:hover .category__title {
+    color: #000000;
+    font-weight: 700;
+  }
+
+  &__img {
+    height: 80%;
+  }
+  &__title {
+    @include fontMd;
+    color: #000000;
+    color: #ffffff;
+    position: relative;
+    transition: all 0.5s;
+    @include drawUnderline;
+  }
+}

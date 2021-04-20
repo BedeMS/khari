@@ -1,0 +1,20 @@
+{
+  "name": "khari",
+  "version": "1.0.0",
+  "description": "A clothing line dedicated on serving Africans and creating Jobs.",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "Bede Sahlu",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "sass": "^1.32.8"
+  },
+  "dependencies": {
+    "uni": "0.0.6",
+    "uniqid": "^5.3.0"
+  }
+}
