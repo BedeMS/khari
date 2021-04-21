@@ -15,12 +15,11 @@ if (module.hot) {
 }
 
 // shows which products to display based on gender
-const controlGender = function (gender) {
-  window.addEventListener("load", categoryView.render(products));
-  // setTimeout(() => {
-  //   categoryView.render(products);
-  // }, 10);
-};
+// const controlGender = function (gender) {
+//   // window.location.href = `${gender}.html`;
+//   console.log(document.readyState);
+//   categoryView.render(products);
+// };
 
 // update state category
 const controlCategory = function (category) {
@@ -122,7 +121,7 @@ const init = function () {
   //Cart + Nav View
   addToCartView.addHandlerRender(controlCartIcon);
   navigationView.addHandlerNav(controlNavigation);
-  navigationView.addHandlerCategory(controlGender);
+  // navigationView.addHandlerCategory(controlGender);
 
   //Category + Selection of Product Views
   categoryView.addHandlerCategory(controlCategory);

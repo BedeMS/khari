@@ -16,17 +16,26 @@ class NavigationView {
     });
   }
 
-  addHandlerCategory(handler) {
-    document.addEventListener("click", (e) => {
-      if (e.target.classList.contains("man")) {
-        categoryView.render();
-        // handler("man");
-      } else if (e.target.classList.contains("woman")) {
-        // handler("woman");
-      }
-    });
+  // addHandlerCategory(handler) {
+  //   window.onbeforeunload = function () {
+  //     if ((window.location.href = "man.html")) {
+  //       handler("man");
+  //       // return;
+  //     } else if ((window.location.href = "woman.html")) {
+  //       handler("woman");
+  //     }
+  //   };
+
+    // document.addEventListener("click", (e) => {
+    //   if (e.target.classList.contains("man")) {
+    //     // e.preventDefault()
+    //     handler("man");
+    //   } else if (e.target.classList.contains("woman")) {
+    //     // handler("woman");
+    //   }
     // });
-  }
+    // });
+  // }
 
   toggleNav() {
     this._nav.classList.toggle("nav-active");
