@@ -14,13 +14,6 @@ if (module.hot) {
   module.hot.accept();
 }
 
-// shows which products to display based on gender
-// const controlGender = function (gender) {
-//   // window.location.href = `${gender}.html`;
-//   console.log(document.readyState);
-//   categoryView.render(products);
-// };
-
 // update state category
 const controlCategory = function (category) {
   // Clear storage expect for Cart

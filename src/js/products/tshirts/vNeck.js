@@ -4,62 +4,10 @@ import uniqid from "uniqid";
 const vNeck = {
   name: "V-Neck",
   category: "T-Shirt",
+  img:
+    "https://i.pinimg.com/originals/4e/be/50/4ebe50e2495b17a79c31e48a0e54883f.png",
   id: uniqid(),
   price: 12.99,
-  // sm: {
-  //   id: "sm",
-  //   colors: [
-  //     {
-  //       id: "#000000",
-  //       color: "black",
-  //       quantity: 2,
-  //       img:
-  //         "https://i.pinimg.com/originals/4e/be/50/4ebe50e2495b17a79c31e48a0e54883f.png",
-  //     },
-  //     {
-  //       id: "#E61938",
-  //       color: "red",
-  //       quantity: 7,
-  //       img:
-  //         "https://i.pinimg.com/originals/4e/be/50/4ebe50e2495b17a79c31e48a0e54883f.png",
-  //     },
-  //     {
-  //       id: "#ffffff",
-  //       color: "white",
-  //       quantity: 9,
-  //       img:
-  //         "https://i.pinimg.com/originals/4e/be/50/4ebe50e2495b17a79c31e48a0e54883f.png",
-  //     },
-  //     {
-  //       id: "#4034eb",
-  //       color: "blue",
-  //       quantity: 1,
-  //       img:
-  //         "https://i.pinimg.com/originals/4e/be/50/4ebe50e2495b17a79c31e48a0e54883f.png",
-  //     },
-  //     {
-  //       id: "#f6fa00",
-  //       color: "yellow",
-  //       quantity: 12,
-  //       img:
-  //         "https://i.pinimg.com/originals/4e/be/50/4ebe50e2495b17a79c31e48a0e54883f.png",
-  //     },
-  //     {
-  //       id: "#0b8500",
-  //       color: "green",
-  //       quantity: 9,
-  //       img:
-  //         "https://i.pinimg.com/originals/4e/be/50/4ebe50e2495b17a79c31e48a0e54883f.png",
-  //     },
-  //     {
-  //       id: "#c7c7c7",
-  //       color: "grey",
-  //       quantity: 8,
-  //       img:
-  //         "https://i.pinimg.com/originals/4e/be/50/4ebe50e2495b17a79c31e48a0e54883f.png",
-  //     },
-  //   ],
-  // },
   md: {
     id: "md",
     colors: [

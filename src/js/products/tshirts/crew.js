@@ -4,6 +4,8 @@ import uniqid from "uniqid";
 const crew = {
   name: "Crew",
   category: "T-Shirt",
+  img:
+    "https://i.pinimg.com/originals/4e/be/50/4ebe50e2495b17a79c31e48a0e54883f.png",
   id: uniqid(),
   price: 15.0,
   xs: {

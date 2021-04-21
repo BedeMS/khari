@@ -4,23 +4,6 @@ class ProductView extends View {
   _parentElement;
   _data;
 
-  render(data) {
-    console.log(document.readyState);
-    // this._data = data;
-    // console.log(this._data);
-    // document.addEventListener("DOMContentLoaded", () => {
-    //   // console.log(this._data);
-    //   this._parentElement = document.querySelector(".product");
-    //   alert(this._parentElement);
-    // });
-  }
-
-  // renderProductPage(data) {
-  //   console.log(data);
-  //   this._data = data;
-  //   // window.location.assign("http://localhost:1234/product.html");
-  // }
-
   _createMarkUp() {
     return `
     <h1 class="product__title">${this._data.name}</h1>

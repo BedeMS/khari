@@ -3,7 +3,6 @@ import View from "./View";
 class selectionView extends View {
   _parentElement = document.querySelector(".main-selection");
   _selection = document.querySelectorAll(".selection");
-  
 
   addHandlerSelection(handler) {
     this._selection.forEach((el) => {
@@ -23,10 +22,11 @@ class selectionView extends View {
   }
 
   _createMarkUp() {
-    return this._data.map((el) => {
+    console.log(this._data);
+    return this._data.selections.map((el) => {
       return `
       <div class="selection" id="${el.id}">
-          <img src="/src/img/t-shirt.png" alt="Crew" class="selection__img" />
+          <img src=${el.img} alt="${el.name}" class="selection__img" />
           <div class="selection__desc">
             <p class="selection__title">${el.name}</p>
           </div>
