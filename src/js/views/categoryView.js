@@ -1,4 +1,7 @@
-class categoryView {
+import View from "./View";
+
+class categoryView extends View {
+  _parentElement = document.querySelector(".categories");
   _category = document.querySelectorAll(".category__title");
 
   addHandlerCategory(handler) {
@@ -8,6 +11,15 @@ class categoryView {
         handler(category);
       });
     });
+  }
+
+  _createMarkUp() {
+    return `
+      <div class="category" id="hoodies">
+        <img src="./src/img/t-shirt.png" alt="Hoody Picture" class="category__img" />
+        <a href="selection.html" class="category__title">Hoody</a>
+      </div>
+    `;
   }
 }
 

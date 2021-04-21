@@ -3,6 +3,7 @@ import selectionView from "./views/selectionView";
 import categoryView from "./views/categoryView";
 import productView from "./views/productView";
 import * as model from "./model";
+import products from "./products/products";
 import productSizesView from "./views/productSizesView";
 import productColorsView from "./views/productColorsView";
 import addToCartView from "./views/addToCartView";
@@ -13,6 +14,13 @@ if (module.hot) {
   module.hot.accept();
 }
 
+// shows which products to display based on gender
+const controlGender = function (gender) {
+  window.addEventListener("load", categoryView.render(products));
+  // setTimeout(() => {
+  //   categoryView.render(products);
+  // }, 10);
+};
 
 // update state category
 const controlCategory = function (category) {
@@ -22,7 +30,6 @@ const controlCategory = function (category) {
   // Update session storage on Users choice
   model.updateState("category", category);
 };
-
 
 //  Receive what product the user want to see
 const controlSelection = function (product) {
@@ -115,6 +122,7 @@ const init = function () {
   //Cart + Nav View
   addToCartView.addHandlerRender(controlCartIcon);
   navigationView.addHandlerNav(controlNavigation);
+  navigationView.addHandlerCategory(controlGender);
 
   //Category + Selection of Product Views
   categoryView.addHandlerCategory(controlCategory);

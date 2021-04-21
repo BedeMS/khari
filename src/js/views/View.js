@@ -1,6 +1,7 @@
 export default class View {
   _data;
   render(data) {
+    console.log("jio")
     // if (!data) return;
     if (!this._parentElement) return;
     this._data = data;
