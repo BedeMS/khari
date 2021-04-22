@@ -1,11 +1,13 @@
 import View from "./View";
 
 class ProductView extends View {
-  _parentElement = document.querySelector(".product");
+  _parentElement = document.querySelector(".main-product");
 
   _createMarkUp() {
     return `
-    <h1 class="product__title">${this._data.name}</h1>
+    <div class="product__background"></div>
+    <div class="product">
+      <h1 class="product__title">${this._data.name}</h1>
         <p class="product__desc">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
           eveniet optio in ea nisi tempora aliquid quas adipisci. Accusamus
@@ -13,43 +15,45 @@ class ProductView extends View {
           ipsam minima asperiores saepe assumenda at quae? Amet debitis
           voluptatem sint.
         </p>
-        <p class="product__price">${this._data.price}</p>
+        <p class="product__price">$ ${this._data.price}</p>
         <div class="product__images">
-          <img src="#" alt="" class="product__img" />
+          <img src="${this._data.img}" alt="" class="product__img" />
 
-          <img src="#" alt="" class="product__img" />
+          <img src="${this._data.img}" alt="" class="product__img" />
 
-          <img src="#" alt="" class="product__img" />
+          <img src="${this._data.img}" alt="" class="product__img" />
         </div>
       </div> 
       <div class="product__image-holder">
         <img
-          src="#"
+          src="${this._data.img}"
           class="main__product-img"
-          alt="T-shirt Image"
+          alt="${this._data.name} Image"
         />
       </div>
       <div class="product__options">
         <div class="product__options-sizes">
           <p>Sizes:</p>
           <div class="sizes">
-            <span class="size-btn size-active">XS</span>
-            <span class="size-btn">SM</span>
-            <span class="size-btn">MD</span>
-            <span class="size-btn">LG</span>
+          ${this._data.sizes
+            .map(
+              (el, i) =>
+                `<span class="size-btn ${i === 0 ? "size-active" : ""}">${
+                  el.id
+                }</span>`
+            )
+            .join("")}
           </div>
         </div>
         <div class="product__options-colors">
           <p>Colors:</p>
           <div class="colors">
-            <span class="color color-active"></span>
-            <span class="color"></span>
-            <span class="color"></span>
-            <span class="color"></span>
-            <span class="color"></span>
-            <span class="color"></span>
-            <span class="color"></span>
-            <span class="color"></span>
+          ${this._data.sizes[0].colors
+            .map(
+              (el) =>
+                `<span class="color" style="background-color:${el.id}"></span>`
+            )
+            .join("")}
           </div>
         </div>
         <div class="product__options-quantity">
@@ -59,6 +63,7 @@ class ProductView extends View {
         <button class="btn btn-cart">
           <i class="fas fa-shopping-cart"></i> Add To Cart
         </button> 
+      </div>
     `;
   }
 }
