@@ -1,7 +1,7 @@
 import { valueObj, getObjects } from "../../helpers";
 import uniqid from "uniqid";
 
-const crew = {
+const crew = { 
   name: "Crew",
   category: "T-Shirt",
   img:

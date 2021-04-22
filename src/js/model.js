@@ -15,22 +15,22 @@ export const persistState = function () {
 
   let { category, selection } = state;
   if (!category && selection) {
-    // Loop through Khari's Products
-    for (let key in products) {
-      //Loop through every category, key = category
-      for (let property in products[key]) {
-        // if property is in this category, then set it in the state
-        if (property === selection) {
-          updateState("category", key);
-          return;
-        } 
-        // else {
-        //   continue;
-        // }
-      }
-    }
+    products.forEach((el) => {
+      el.selections.forEach((element) => {
+        if (element.name === state.selection) {
+          state.category = el.name;
+        }
+      });
+    });
   }
-  state.product = products[state.category][state.selection];
+
+  // get current product based on category then selection
+  let [currentProduct] = products.filter((el) => el.name === state.category);
+  [currentProduct] = currentProduct.selections.filter(
+    (el) => el.name === state.selection
+  );
+  // console.log(currentProduct);
+  state.product = currentProduct;
 
   return state;
 };
@@ -89,19 +89,19 @@ export const addToCart = function () {
 };
 
 export const productData = function () {
-  // // get initial product size and color and set to state
+  // get initial product size and color and set to state
   // console.log(state.product);
-  const sizes = getObjects(state.product);
-  const smallestSize = sizes[0];
-  const firstColor = smallestSize.colors[0];
-
-  updateState("size", smallestSize.id);
-  updateState("color", firstColor.color);
+  // const sizes = getObjects(state.product);
+  // const smallestSize = sizes[0];
+  // const firstColor = smallestSize.colors[0];
+  // updateState("size", smallestSize.id);
+  // updateState("color", firstColor.color);
 };
 
 export const updateState = function (item, val) {
   sessionStorage.setItem(item, val);
   persistState();
+  // console.log(state);
 };
 
 // Loop through storage and delete everything except for our Cart

@@ -5,5 +5,5 @@ const products = [
   tshirts,
   hoodies,
 ];
-
+ 
 export default products;

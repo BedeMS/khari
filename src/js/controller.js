@@ -31,8 +31,9 @@ const controlSelection = function (product) {
   // Get data based on user selection
   model.productData();
 
+  console.log(model.state)
   //Load DOM so that we can load content
-  window.location.assign("http://localhost:1234/product.html");
+  // window.location.assign("http://localhost:1234/product.html");
 
   // Render Page
   // productView.render(productData);

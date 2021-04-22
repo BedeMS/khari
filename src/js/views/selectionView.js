@@ -8,14 +8,7 @@ class selectionView extends View {
     this._selection.forEach((el) => {
       el.addEventListener("click", (e) => {
         e.stopPropagation();
-        let product;
-        if (!e.target.classList.contains("selection")) {
-          product = e.target.parentNode.id;
-          console.log(product);
-        } else if (e.target.classList.contains("selection")) {
-          product = e.target.id;
-          console.log(product);
-        }
+        let product = el.querySelector(".selection__title").textContent;
         handler(product);
       });
     });
