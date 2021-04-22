@@ -24,14 +24,6 @@ export const persistState = function () {
     });
   }
 
-  // get current product based on category then selection
-  let [currentProduct] = products.filter((el) => el.name === state.category);
-  [currentProduct] = currentProduct.selections.filter(
-    (el) => el.name === state.selection
-  );
-  // console.log(currentProduct);
-  state.product = currentProduct;
-
   return state;
 };
 
@@ -89,13 +81,18 @@ export const addToCart = function () {
 };
 
 export const productData = function () {
-  // get initial product size and color and set to state
-  // console.log(state.product);
-  // const sizes = getObjects(state.product);
-  // const smallestSize = sizes[0];
-  // const firstColor = smallestSize.colors[0];
-  // updateState("size", smallestSize.id);
-  // updateState("color", firstColor.color);
+  // get current product based on category then selection
+  let [currentProduct] = products.filter((el) => el.name === state.category);
+  [currentProduct] = currentProduct.selections.filter(
+    (el) => el.name === state.selection
+  );
+  state.product = currentProduct;
+  const initSize = state.product.sizes[0].id;
+  const initColor = state.product.sizes[0].colors[0].id;
+
+  // updateState("product", JSON.stringify(state.product));
+  updateState("size", initSize);
+  updateState("color", initColor);
 };
 
 export const updateState = function (item, val) {

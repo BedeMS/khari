@@ -4,8 +4,8 @@
   "description": "A clothing line dedicated on serving Africans and creating Jobs.",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "start": "parcel index.html product.html selection.html checkout.html",
+    "build": "parcel build index.html --public-url  ./"
   },
   "author": "Bede Sahlu",
   "license": "ISC",

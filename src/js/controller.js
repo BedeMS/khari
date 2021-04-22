@@ -28,15 +28,11 @@ const controlSelection = function (product) {
   // update info to state
   model.updateState("selection", product);
 
-  // Get data based on user selection
+  // Set data based on user selection
   model.productData();
 
-  console.log(model.state)
   //Load DOM so that we can load content
   // window.location.assign("http://localhost:1234/product.html");
-
-  // Render Page
-  // productView.render(productData);
 };
 
 const controlProductSizes = function (size, element) {
