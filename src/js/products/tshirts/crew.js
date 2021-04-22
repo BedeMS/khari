@@ -7,7 +7,7 @@ const crew = {
   img:
     "https://i.pinimg.com/originals/4e/be/50/4ebe50e2495b17a79c31e48a0e54883f.png",
   id: uniqid(),
-  price: 15.0,
+  price: 15.99,
   sizes: [
     {
       id: "xs",

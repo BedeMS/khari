@@ -112,10 +112,11 @@
   transition: all 0.3s ease-in-out;
   cursor: pointer;
   background-color: $color-light-2;
+  border: 0.5px solid #adadad;
 }
 
 .color-active {
-  border: 2px solid white;
+  border: 4px solid white;
 }
 
 // Cart Amount
