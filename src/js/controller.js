@@ -32,7 +32,7 @@ const controlSelection = function (product) {
   model.productData();
 
   //Load DOM so that we can load content
-  // window.location.assign("http://localhost:1234/product.html");
+  window.location.assign("http://localhost:1234/product.html");
 };
 
 const controlProductSizes = function (size, element) {

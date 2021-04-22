@@ -1,8 +1,7 @@
 import View from "./View";
 
 class ProductView extends View {
-  _parentElement;
-  _data;
+  _parentElement = document.querySelector(".product");
 
   _createMarkUp() {
     return `
@@ -16,16 +15,16 @@ class ProductView extends View {
         </p>
         <p class="product__price">${this._data.price}</p>
         <div class="product__images">
-          <img src=${this._data.xs.colors.black.img} alt="" class="product__img" />
+          <img src="#" alt="" class="product__img" />
 
-          <img src=${this._data.xs.colors.black.img} alt="" class="product__img" />
+          <img src="#" alt="" class="product__img" />
 
-          <img src=${this._data.xs.colors.black.img} alt="" class="product__img" />
+          <img src="#" alt="" class="product__img" />
         </div>
       </div> 
       <div class="product__image-holder">
         <img
-          src=${this._data.xs.colors.black.img}
+          src="#"
           class="main__product-img"
           alt="T-shirt Image"
         />
@@ -59,12 +58,9 @@ class ProductView extends View {
         </div>
         <button class="btn btn-cart">
           <i class="fas fa-shopping-cart"></i> Add To Cart
-        </button> */
+        </button> 
     `;
   }
-  // _sizesMarkup(){
-  // loop through obj and get length
-  // }
 }
 
 export default new ProductView();

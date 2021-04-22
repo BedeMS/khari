@@ -90,7 +90,7 @@ export const productData = function () {
   const initSize = state.product.sizes[0].id;
   const initColor = state.product.sizes[0].colors[0].id;
 
-  // updateState("product", JSON.stringify(state.product));
+  updateState("product", JSON.stringify(state.product));
   updateState("size", initSize);
   updateState("color", initColor);
 };
