@@ -27,6 +27,36 @@ export const persistState = function () {
   return state;
 };
 
+export const productData = function () {
+  // get current product based on category then selection
+  let [currentProduct] = products.filter((el) => el.name === state.category);
+  [currentProduct] = currentProduct.selections.filter(
+    (el) => el.name === state.selection
+  );
+  state.product = currentProduct;
+  const initSize = state.product.sizes[0].id;
+  const initColor = state.product.sizes[0].colors[0].id;
+
+  updateState("product", JSON.stringify(state.product));
+  updateState("size", initSize);
+  updateState("color", initColor);
+};
+
+export const updateState = function (item, val) {
+  sessionStorage.setItem(item, val);
+  persistState();
+  // console.log(state);
+};
+
+// Loop through storage and delete everything except for our Cart
+export const clearState = function () {
+  for (let key in sessionStorage) {
+    if (key !== "cart") {
+      sessionStorage.removeItem(key);
+    }
+  }
+};
+
 export const getCartInfo = function () {
   let cart;
   if (!sessionStorage.cart) return;
@@ -63,51 +93,25 @@ export const addToCart = function () {
   if (!sessionStorage.cart) updateState("cart", JSON.stringify([]));
 
   let cart = JSON.parse(sessionStorage.cart);
+  let product = JSON.parse(sessionStorage.product);
+  let [size] = product.sizes.filter((el) => el.id === state.size);
+  let [color] = size.colors.filter((el) => el.id === state.color);
+  console.log(color);
 
   cart.push({
     id: uniqid(),
-    category: state.product.category,
-    product: state.product.name,
+    category: product.category,
+    product: product.name,
     size: state.size,
-    color: state.color,
+    color: color.color,
     quantity: +state.quantity,
-    price: +state.product.price,
-    total: +state.product.price * +state.quantity,
+    price: +product.price,
+    total: +product.price * +state.quantity,
   });
   // console.log(cart);
   updateState("cart", JSON.stringify(cart));
 
   return cart;
-};
-
-export const productData = function () {
-  // get current product based on category then selection
-  let [currentProduct] = products.filter((el) => el.name === state.category);
-  [currentProduct] = currentProduct.selections.filter(
-    (el) => el.name === state.selection
-  );
-  state.product = currentProduct;
-  const initSize = state.product.sizes[0].id;
-  const initColor = state.product.sizes[0].colors[0].id;
-
-  updateState("product", JSON.stringify(state.product));
-  updateState("size", initSize);
-  updateState("color", initColor);
-};
-
-export const updateState = function (item, val) {
-  sessionStorage.setItem(item, val);
-  persistState();
-  // console.log(state);
-};
-
-// Loop through storage and delete everything except for our Cart
-export const clearState = function () {
-  for (let key in sessionStorage) {
-    if (key !== "cart") {
-      sessionStorage.removeItem(key);
-    }
-  }
 };
 
 export const deleteCartItem = function (cartItem) {

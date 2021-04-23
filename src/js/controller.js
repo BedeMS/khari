@@ -52,7 +52,6 @@ const controlProductSizes = function (size, element) {
   );
 
   model.updateState("color", product.colors[0].id);
-  // productColorsView.renderColor(element);
 };
 
 const controlProductColors = function (color, element) {
@@ -67,6 +66,8 @@ const controlProductColors = function (color, element) {
 
 // Main Add To Cart Function
 const controlAddToCart = function () {
+  console.log("hi");
+
   //get product quantity
   const productQuantity = addToCartView.getQuantity();
 
@@ -101,6 +102,7 @@ const controlUpdateQuantity = function (itemId, quantity) {
 };
 
 const controlCartIcon = function () {
+  // console.log("hi");
   let cartData = model.getCartInfo();
   if (!cartData) return;
 
@@ -118,6 +120,9 @@ const controlNavigation = function () {
 };
 
 const init = function () {
+  // load cart based on session
+  controlCartIcon();
+
   // Cart Specific View
   cartView.addHandlerRender(controlCart);
   cartView.addHandlerDeleteItem(controlDeleteCart);
@@ -125,7 +130,7 @@ const init = function () {
   cartView.addHandlerRenderCheckoutForm(controlRenderCheckout);
 
   //Cart + Nav View
-  addToCartView.addHandlerRender(controlCartIcon);
+  // addToCartView.addHandlerRender(controlCartIcon);
   navigationView.addHandlerNav(controlNavigation);
   // navigationView.addHandlerCategory(controlGender);
 

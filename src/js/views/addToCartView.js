@@ -1,7 +1,7 @@
 import View from "./View";
 
 class AddToCartView extends View {
-  _addToCartBtn = document.getElementById("addToCart");
+  // _addToCartBtn = document.getElementById("addToCart");
   _quantityInput = document.getElementById("quantity");
   _parentElement = document.querySelector(".header__cart");
 
@@ -24,13 +24,15 @@ class AddToCartView extends View {
   }
 
   getQuantity() {
-    // console.log(this._quantityInput.value);
     return this._quantityInput.value;
   }
 
   addHandlerAddToCart(handler) {
-    if (!this._addToCartBtn) return;
-    this._addToCartBtn.addEventListener("click", handler);
+    document.addEventListener("click", (e) => {
+      if (e.target.closest("#addToCart")) {
+        handler();
+      }
+    });
   }
 }
 

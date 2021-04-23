@@ -66,9 +66,9 @@ class ProductView extends View {
         </div>
         <div class="product__options-quantity">
           <p>Quantity</p>
-          <input type="number" id="quantity" />
+          <input type="number" id="quantity" value="1" min="1" />
         </div>
-        <button class="btn btn-cart">
+        <button id="addToCart" class="btn btn-cart">
           <i class="fas fa-shopping-cart"></i> Add To Cart
         </button> 
       </div>
