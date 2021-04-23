@@ -6,6 +6,7 @@ import * as model from "./model";
 import products from "./products/products";
 import productSizesView from "./views/productSizesView";
 import productColorsView from "./views/productColorsView";
+import productImageView from "./views/productImageView";
 import addToCartView from "./views/addToCartView";
 import cartView from "./views/cartView";
 import checkoutView from "./views/checkoutView";
@@ -35,6 +36,7 @@ const controlSelection = function (product) {
   window.location.assign("http://localhost:1234/product.html");
 };
 
+// Product Size and Color Changes
 const controlProductSizes = function (size, element) {
   // update State on user Size
   model.updateState("size", size);
@@ -45,8 +47,13 @@ const controlProductSizes = function (size, element) {
 const controlProductColors = function (color, element) {
   // update State on user Size
   model.updateState("color", color);
-  // render size choice
+
+  productImageView.render(model.state);
+
+  // render color choice
   productColorsView.renderColor(element);
+
+  console.log(model.state);
 };
 
 // Main Add To Cart Function

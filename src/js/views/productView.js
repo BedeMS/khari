@@ -17,16 +17,22 @@ class ProductView extends View {
         </p>
         <p class="product__price">$ ${this._data.price}</p>
         <div class="product__images">
-          <img src="${this._data.img}" alt="" class="product__img" />
+          <img src="${
+            this._data.sizes[0].colors[0].img
+          }" alt="" class="product__img" />
 
-          <img src="${this._data.img}" alt="" class="product__img" />
+          <img src="${
+            this._data.sizes[0].colors[0].img
+          }" alt="" class="product__img" />
 
-          <img src="${this._data.img}" alt="" class="product__img" />
+          <img src="${
+            this._data.sizes[0].colors[0].img
+          }" alt="" class="product__img" />
         </div>
       </div> 
       <div class="product__image-holder">
         <img
-          src="${this._data.img}"
+          src="${this._data.sizes[0].colors[0].img}"
           class="main__product-img"
           alt="${this._data.name} Image"
         />
@@ -38,9 +44,9 @@ class ProductView extends View {
           ${this._data.sizes
             .map(
               (el, i) =>
-                `<span class="size-btn ${i === 0 ? "size-active" : ""}">${
-                  el.id
-                }</span>`
+                `<span id="${el.id}" class="size-btn ${
+                  i === 0 ? "size-active" : ""
+                }">${el.id}</span>`
             )
             .join("")}
           </div>
@@ -50,8 +56,10 @@ class ProductView extends View {
           <div class="colors">
           ${this._data.sizes[0].colors
             .map(
-              (el) =>
-                `<span class="color" style="background-color:${el.id}"></span>`
+              (el, i) =>
+                `<span id="${el.id}" class="color ${
+                  i === 0 ? "color-active" : ""
+                }" style="background-color:${el.id}"></span>`
             )
             .join("")}
           </div>

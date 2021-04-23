@@ -1,11 +1,14 @@
 import { addClass } from "../helpers";
+import View from "./View";
 
-class productSizesView {
+class productSizesView extends View {
+  _parentElement = document.querySelector(".sizes");
   _sizeBtn = document.querySelectorAll(".size-btn");
 
   renderSize(element) {
     addClass(element, "size-active");
   }
+  
 
   addHandlerProductSizes(handler) {
     // console.log(this._sizeBtn);

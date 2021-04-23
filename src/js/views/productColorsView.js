@@ -1,10 +1,9 @@
 import { addClass } from "../helpers";
+import View from "./View";
 
-class productColorsView {
-  //   _sizeBtn = document.querySelectorAll(".size-btn");
+class productColorsView extends View {
+  _parentElement = document.querySelector(".colors");
   _colorBtn = document.querySelectorAll(".color");
-  // _quantityInput = document.getElementById("quantity");
-  // _addToCartBtn = document.getElementById("addToCart");
 
   renderColor(element) {
     addClass(element, "color-active");
@@ -18,6 +17,13 @@ class productColorsView {
       });
     });
   }
+
+  // _createMarkUp() {
+  //   const product = JSON.parse(this._data.product);
+  //   return `
+    
+  //   `;
+  // }
 }
 
 export default new productColorsView();

@@ -17,49 +17,28 @@ const custom = {
           color: "black",
           quantity: 5,
           img:
-            "https://i.pinimg.com/originals/4e/be/50/4ebe50e2495b17a79c31e48a0e54883f.png",
+            "https://cdn.shopify.com/s/files/1/1151/0394/products/hoodie_large.png",
         },
         {
           id: "#E61938",
           color: "red",
           quantity: 5,
           img:
-            "https://i.pinimg.com/originals/4e/be/50/4ebe50e2495b17a79c31e48a0e54883f.png",
-        },
-        {
-          id: "#ffffff",
-          color: "white",
-          quantity: 5,
-          img:
-            "https://i.pinimg.com/originals/4e/be/50/4ebe50e2495b17a79c31e48a0e54883f.png",
+            "https://www.pngkit.com/png/full/96-964734_red-hoodie-png-hundreds-zip-up-hoodie.png",
         },
         {
           id: "#4034eb",
           color: "blue",
           quantity: 5,
           img:
-            "https://i.pinimg.com/originals/4e/be/50/4ebe50e2495b17a79c31e48a0e54883f.png",
-        },
-        {
-          id: "#f6fa00",
-          color: "yellow",
-          quantity: 5,
-          img:
-            "https://i.pinimg.com/originals/4e/be/50/4ebe50e2495b17a79c31e48a0e54883f.png",
-        },
-        {
-          id: "#0b8500",
-          color: "green",
-          quantity: 5,
-          img:
-            "https://i.pinimg.com/originals/4e/be/50/4ebe50e2495b17a79c31e48a0e54883f.png",
+            "https://ramptshirts.com/assets/images/samples/standard-hoodies/royal-blue.png",
         },
         {
           id: "#c7c7c7",
           color: "grey",
           quantity: 5,
           img:
-            "https://i.pinimg.com/originals/4e/be/50/4ebe50e2495b17a79c31e48a0e54883f.png",
+            "https://ramptshirts.com/assets/images/samples/standard-hoodies/light-grey.png",
         },
       ],
     },
