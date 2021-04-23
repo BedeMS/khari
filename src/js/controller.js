@@ -40,8 +40,19 @@ const controlSelection = function (product) {
 const controlProductSizes = function (size, element) {
   // update State on user Size
   model.updateState("size", size);
+
+  productColorsView.render(model.state);
+
   // render size choice
   productSizesView.renderSize(element);
+
+  // update color on state
+  const [product] = JSON.parse(model.state.product).sizes.filter(
+    (el) => el.id === model.state.size
+  );
+
+  model.updateState("color", product.colors[0].id);
+  // productColorsView.renderColor(element);
 };
 
 const controlProductColors = function (color, element) {
@@ -52,8 +63,6 @@ const controlProductColors = function (color, element) {
 
   // render color choice
   productColorsView.renderColor(element);
-
-  console.log(model.state);
 };
 
 // Main Add To Cart Function
