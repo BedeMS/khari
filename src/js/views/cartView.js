@@ -62,17 +62,17 @@ class cartView extends View {
     <tr class="cart__row">
         <td class="cart__shipping">Shipping</td>
         <td class="cart__tax"></td>
-        <td class="cart__shipping-cost">${cartTotal.shipping}</td>
+        <td class="cart__shipping-cost">$${cartTotal.shipping}</td>
     </tr>
     <tr class="cart__row">
         <td class="cart__tax">Tax</td>
         <td class="cart__tax"></td>
-        <td class="cart__tax-cost">${cartTotal.tax}</td>
+        <td class="cart__tax-cost">$${cartTotal.tax}</td>
     </tr>
     <tr class="cart__row">
         <td class="cart__total">Total</td>
         <td class="cart__total-quantity">${cartTotal.totalQuantity}</td>
-        <td class="cart__total-cost">${cartTotal.totalCost}</td>
+        <td class="cart__total-cost">$${cartTotal.totalCost}</td>
     </tr>
     <tr class="cart__row">
         <td class="cart__total"></td>
@@ -87,10 +87,10 @@ class cartView extends View {
   _generateCartItems(el) {
     return `<tr class="cart__row" id=${el.id}>
         <td class="cart__item">
-        <i class="fas fa-trash-alt cart__item-delete"></i>${el.category}, ${el.product}: ${el.size} ${el.color}
+        <i class="fas fa-trash-alt cart__item-delete"></i>${el.category}, ${el.product} <br> ${el.size} ${el.color}
         </td>
         <td class="cart__quantity"><input class="cart__quantity-value" min=1 type="number" value=${el.quantity} /></td>
-        <td class="cart__cost">${el.total}</td>
+        <td class="cart__cost">$${el.total}</td>
     </tr>`;
   }
   //     category: "T-Shirt"

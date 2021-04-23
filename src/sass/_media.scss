@@ -18,6 +18,7 @@
 @media only screen and (max-width: 1136px) {
   // home page
   .main {
+    overflow: hidden;
     &__heading {
       &-title {
         font-size: 10rem;
@@ -130,6 +131,9 @@
     * {
       margin-bottom: 1rem;
     }
+    &__title {
+      @include fontLg;
+    }
 
     &__desc {
       @include fontXs;
@@ -166,6 +170,11 @@
     & .btn-cart {
       justify-self: start;
     }
+  }
+
+  // pop up
+  .popup {
+    width: 100%;
   }
 }
 
@@ -223,15 +232,12 @@
     width: 60%;
     &__img {
       height: 80%;
-      //   width: 75%;
     }
   }
   #featured_1 {
     top: 80%;
   }
-  //   #featured_2 {
-  //     bottom: 60%;
-  //   }
+
   .categories {
     overflow-y: scroll;
   }
@@ -259,7 +265,7 @@
 
   // cart page
   .cart {
-    width: 90%;
+    width: 95%;
     th.cart__heading {
       // @include fontXs;
       display: none;
@@ -279,7 +285,13 @@
   input[type="number"] {
     width: 2rem;
   }
+
+  // pop up
+  .popup {
+    @include fontSm;
+  }
 }
+
 @media only screen and (max-width: 630px) {
   // short Header
   .header__short {
@@ -308,11 +320,6 @@
     margin: 1rem auto;
   }
 
-  //   selection page
-  //   .main-selection {
-  //     grid-template-rows: repeat(auto, 25rem);
-  //   }
-  //   selection page
   .main-selection {
     width: 80%;
     height: auto;
@@ -337,7 +344,7 @@
   .product {
     align-items: center;
     &__title {
-      @include fontXl;
+      @include fontLg;
     }
     &__price {
       @include fontLg;
@@ -356,6 +363,14 @@
     & .btn-cart {
       align-self: center;
     }
+  }
+
+  // pop up
+  .popup__title {
+    @include fontMd;
+  }
+  .popup {
+    @include fontXs;
   }
 }
 
@@ -406,13 +421,11 @@
     }
     .header__menu-img img {
       display: none;
-      //   height: 10rem;
-      //   right: 50%;
     }
     .header__icons {
       display: flex;
       justify-content: space-evenly;
-      width: 25%;
+      width: 35%;
       margin-right: 1rem;
     }
   }

@@ -1,6 +1,6 @@
 .main-cart {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: relative;
   background-color: $color-light-3;
   display: flex;
@@ -11,14 +11,11 @@
 }
 
 .cart {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 80%;
   min-height: 60%;
-  height: auto;
+  height: 100%;
   border-collapse: collapse;
+  margin-top: 20rem;
 
   tr {
     height: 7rem;

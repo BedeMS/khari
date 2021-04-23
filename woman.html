@@ -14,7 +14,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/sass/main.scss" />
-    <script defer src="src/js/controller.js"></script>
     <title>Khari</title>
     <link rel="icon" href="./src/img/KhariLogoWhite.png" type="image/x-icon" />
   </head>
@@ -41,9 +40,9 @@
           <li class="nav__list-item"><a href="about.html">About Us</a></li>
         </ul>
         <div class="social-icons">
-          <i class="fas fa-search"></i>
-          <a href="#"><i class="fas fa-user"></i></a>
-          <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+          <a href="#"><i class="fab fa-facebook-square"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
       </div>
       <div class="nav-container-side"></div>
@@ -52,7 +51,7 @@
     <main class="main-man">
       <section class="featured">
         <img
-          src="src/img/Blueshirt.png"
+          src="src/img/model2.png"
           alt="Featured Items"
           class="featured__img"
         />
@@ -71,75 +70,42 @@
           >
         </div>
       </section>
-      <section class="products">
-        <div class="product">
-          <img src="./src/img/t-shirt.png" alt="" class="product__img" />
-          <a href="#" class="product__title">Hoody</ad>
+      <section class="categories" id="man-categories">
+        <!-- <div class="category" id="hoodies">
+          <img src="./src/img/t-shirt.png" alt="" class="category__img" />
+          <a href="selection.html" class="category__title">Hoody</a>
         </div>
-        <div class="product">
-          <img src="./src/img/t-shirt.png" alt="" class="product__img" />
-          <a href="#" class="product__title">T-Shirt</ad>
+        <div class="category" id="tshirts">
+          <img src="./src/img/t-shirt.png" alt="" class="category__img" />
+          <a href="selection.html" class="category__title">T-Shirt</a>
         </div>
-        <div class="product">
-          <img src="./src/img/t-shirt.png" alt="" class="product__img" />
-          <a href="#" class="product__title">Jacket</ad>
+        <div class="category" id="jackets">
+          <img src="./src/img/t-shirt.png" alt="" class="category__img" />
+          <a href="selection.html" class="category__title">Jacket</a>
         </div>
-        <div class="product">
-          <img src="./src/img/t-shirt.png" alt="" class="product__img" />
-          <a href="#" class="product__title">Sweater</ad>
+        <div class="category" id="sweaters">
+          <img src="./src/img/t-shirt.png" alt="" class="category__img" />
+          <a href="selection.html" class="category__title">Sweater</a>
         </div>
-        <div class="product">
-          <img src="./src/img/t-shirt.png" alt="" class="product__img" />
-          <a href="#" class="product__title">Shorts</ad>
+        <div class="category" id="shorts">
+          <img src="./src/img/t-shirt.png" alt="" class="category__img" />
+          <a href="selection.html" class="category__title">Shorts</a>
         </div>
-        <div class="product">
-          <img src="./src/img/t-shirt.png" alt="" class="product__img" />
-          <a href="#" class="product__title">Pants</ad>
+        <div class="category" id="pants">
+          <img src="./src/img/t-shirt.png" alt="" class="category__img" />
+          <a href="selection.html" class="category__title">Pants</a>
         </div>
-        <div class="product">
-          <img src="./src/img/t-shirt.png" alt="" class="product__img" />
-          <a href="#" class="product__title">Socks</ad>
+        <div class="category" id="socks">
+          <img src="./src/img/t-shirt.png" alt="" class="category__img" />
+          <a href="selection.html" class="category__title">Socks</a>
         </div>
-        <div class="product">
-          <img src="./src/img/t-shirt.png" alt="" class="product__img" />
-          <a href="selection.html" class="product__title">Underwear</ad>
-        </div>
+        <div class="category" id="underwears">
+          <img src="./src/img/t-shirt.png" alt="" class="category__img" />
+          <a href="selection.html" class="category__title">Underwear</a>
+        </div> -->
       </section>
     </main>
+    <script defer src="src/js/controller.js"></script>
+    <script defer src="src/js/categories.js"></script>
   </body>
 </html>
-
-<!-- <a class="view-product"><span class="view-product-add">&#43;</span></a>
-<div class="nav-icons">
-  <i class="fas fa-search"></i>
-  <i class="fas fa-user"></i>
-  <i class="fas fa-shopping-bag"></i>
-</div>
-<i class="fas fa-bars"></i>
-<div class="social-icons">
-  <i class="fab fa-facebook-square"></i>
-  <i class="fab fa-instagram"></i>
-  <i class="fab fa-twitter"></i>
-</div>
-
-<button class="btn btn-cart">
-  <i class="fas fa-shopping-cart"></i> Add To Cart
-</button>
-<button class="btn">Checkout</button>
-<button class="btn">Continue</button>
-<div class="sizes">
-  <span class="size-btn size-active">XS</span>
-  <span class="size-btn">SM</span>
-  <span class="size-btn">MD</span>
-  <span class="size-btn">LG</span>
-</div>
-<div class="colors">
-  <span class="color color-active"></span>
-  <span class="color"></span>
-  <span class="color"></span>
-  <span class="color"></span>
-  <span class="color"></span>
-  <span class="color"></span>
-  <span class="color"></span>
-  <span class="color"></span>
-</div> -->
