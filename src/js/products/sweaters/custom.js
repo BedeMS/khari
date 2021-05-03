@@ -3,7 +3,7 @@ import uniqid from "uniqid";
 
 const custom = {
   name: "Custom",
-  category: "Hoody",
+  category: "Sweater",
   img:
     "https://ramptshirts.com/assets/images/samples/standard-hoodies/light-grey.png",
   id: uniqid(),
