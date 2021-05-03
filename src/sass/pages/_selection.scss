@@ -32,6 +32,8 @@
   box-shadow: 0 12px 15px rgba($color-dark-1, 0.2);
 
   .selection__img {
+    max-height: 80%;
+    height: auto;
     width: 100%;
   }
 

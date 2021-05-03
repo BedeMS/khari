@@ -5,7 +5,7 @@ const custom = {
   name: "Custom",
   category: "Jacket",
   img:
-    "https://ramptshirts.com/assets/images/samples/standard-hoodies/light-grey.png",
+    "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
   id: uniqid(),
   price: 15.0,
   sizes: [
@@ -17,28 +17,28 @@ const custom = {
           color: "black",
           quantity: 5,
           img:
-            "https://cdn.shopify.com/s/files/1/1151/0394/products/hoodie_large.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#E61938",
           color: "red",
           quantity: 5,
           img:
-            "https://www.pngkit.com/png/full/96-964734_red-hoodie-png-hundreds-zip-up-hoodie.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#4034eb",
           color: "blue",
           quantity: 5,
           img:
-            "https://ramptshirts.com/assets/images/samples/standard-hoodies/royal-blue.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#c7c7c7",
           color: "grey",
           quantity: 5,
           img:
-            "https://ramptshirts.com/assets/images/samples/standard-hoodies/light-grey.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
       ],
     },
@@ -50,49 +50,49 @@ const custom = {
           color: "black",
           quantity: 2,
           img:
-            "https://cdn.shopify.com/s/files/1/1151/0394/products/hoodie_large.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#E61938",
           color: "red",
           quantity: 7,
           img:
-            "https://www.pngkit.com/png/full/96-964734_red-hoodie-png-hundreds-zip-up-hoodie.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#ffffff",
           color: "white",
           quantity: 9,
           img:
-            "https://i.pinimg.com/originals/40/5c/47/405c4744c53d43be0e32dfe17e941696.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#4034eb",
           color: "blue",
           quantity: 1,
           img:
-            "https://ramptshirts.com/assets/images/samples/standard-hoodies/royal-blue.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#f6fa00",
           color: "yellow",
           quantity: 12,
           img:
-            "https://ramptshirts.com/assets/images/samples/standard-hoodies/gold.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#0b8500",
           color: "green",
           quantity: 9,
           img:
-            "https://www.sportyfied.com/thumbs/regular/021031_605_basichoody_f_700x700.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#c7c7c7",
           color: "grey",
           quantity: 8,
           img:
-            "https://ramptshirts.com/assets/images/samples/standard-hoodies/light-grey.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
       ],
     },
@@ -104,49 +104,49 @@ const custom = {
           color: "black",
           quantity: 1,
           img:
-            "https://cdn.shopify.com/s/files/1/1151/0394/products/hoodie_large.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#E61938",
           color: "red",
           quantity: 8,
           img:
-            "https://www.pngkit.com/png/full/96-964734_red-hoodie-png-hundreds-zip-up-hoodie.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#ffffff",
           color: "white",
           quantity: 6,
           img:
-            "https://i.pinimg.com/originals/40/5c/47/405c4744c53d43be0e32dfe17e941696.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#4034eb",
           color: "blue",
           quantity: 2,
           img:
-            "https://ramptshirts.com/assets/images/samples/standard-hoodies/royal-blue.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#f6fa00",
           color: "yellow",
           quantity: 9,
           img:
-            "https://ramptshirts.com/assets/images/samples/standard-hoodies/gold.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#0b8500",
           color: "green",
           quantity: 4,
           img:
-            "https://www.sportyfied.com/thumbs/regular/021031_605_basichoody_f_700x700.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#c7c7c7",
           color: "grey",
           quantity: 2,
           img:
-            "https://ramptshirts.com/assets/images/samples/standard-hoodies/light-grey.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
       ],
     },
@@ -158,49 +158,49 @@ const custom = {
           color: "black",
           quantity: 7,
           img:
-            "https://cdn.shopify.com/s/files/1/1151/0394/products/hoodie_large.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#E61938",
           color: "red",
           quantity: 6,
           img:
-            "https://www.pngkit.com/png/full/96-964734_red-hoodie-png-hundreds-zip-up-hoodie.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#ffffff",
           color: "white",
           quantity: 5,
           img:
-            "https://i.pinimg.com/originals/40/5c/47/405c4744c53d43be0e32dfe17e941696.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#4034eb",
           color: "blue",
           quantity: 4,
           img:
-            "https://ramptshirts.com/assets/images/samples/standard-hoodies/royal-blue.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#f6fa00",
           color: "yellow",
           quantity: 3,
           img:
-            "https://ramptshirts.com/assets/images/samples/standard-hoodies/gold.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#0b8500",
           color: "green",
           quantity: 2,
           img:
-            "https://www.sportyfied.com/thumbs/regular/021031_605_basichoody_f_700x700.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
         {
           id: "#c7c7c7",
           color: "grey",
           quantity: 1,
           img:
-            "https://ramptshirts.com/assets/images/samples/standard-hoodies/light-grey.png",
+            "https://purepng.com/public/uploads/large/purepng.com-jacketclothingjacketfashion-men-dress-wear-cloth-coat-jacket-631522326867zvwfe.png",
         },
       ],
     },

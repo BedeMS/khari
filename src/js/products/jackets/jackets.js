@@ -7,6 +7,6 @@ export default {
   name: "Jackets",
   id: uniqid(),
   img:
-    "https://ramptshirts.com/assets/images/samples/standard-hoodies/light-grey.png",
+    "https://purepng.com/public/uploads/large/purepng.com-orange-jacketgarmentupper-bodyjacketlighterorange-1421526362216wbbfz.png",
   selections: [custom, graphic, comfort],
 };
