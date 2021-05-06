@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="f69bc7bad6bb14c20567576f4d84e804" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous">
+    <link rel="stylesheet" href="512ad3efed2d2ce547dc11287c1bf2d9">
+    <script defer="" src="8986d1d97d884c8859a867f2aa7ae4ec"></script>
+    <title>Khari</title>
+    <link rel="icon" href="97a992a1eb85523004259f9902298be9" type="image/x-icon">
+  </head>
+  <body>
+    <header class="header header__short">
+      <a href="#" class="header__nav-btn"><i class="fas fa-bars"></i></a>
+      <a class="header__menu-img" href="8558dd4bd269331edbd120b56737655c">
+        <img src="6a70360c8d8bae5556c1d7b13c7e5140" alt="Khari">
+      </a>
+    </header>
+    <div class="nav-container">
+      <div class="nav">
+        <h1 class="nav__header">Khari</h1>
+        <ul class="nav__list">
+          <li class="nav__list-item"><a href="b3f8ab7c494c8fd5d7dcdb243fcbf9a5">Man</a></li>
+          <li class="nav__list-item"><a href="69c24e218732fe3a21e3b265c53f747f">Woman</a></li>
+          <li class="nav__list-item"><a href="990e9b6b362da8ccb6546eaf596221e6">Pop-Up</a></li>
+          <li class="nav__list-item"><a href="4e7c82aafa15f6702676f467edfa0080">About Us</a></li>
+        </ul>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-square"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="nav-container-side"></div>
+    </div>
+    <main class="main-popup">
+      <h1 class="popup__title">Upcoming Pop Ups</h1>
+      <table class="popup">
+        <tr>
+          <td>Paris</td>
+          <td>Jan 25, 2022</td>
+          <td>3022 Amsterdam Road, Paris</td>
+        </tr>
+        <tr>
+          <td>Dakar</td>
+          <td>Jan 25, 2022</td>
+          <td>3022 Amsterdam Road, Paris</td>
+        </tr>
+        <tr>
+          <td>Vancouver</td>
+          <td>Jan 25, 2022</td>
+          <td>3022 Amsterdam Road, Paris</td>
+        </tr>
+        <tr>
+          <td>Philly</td>
+          <td>Jan 25, 2022</td>
+          <td>3022 Amsterdam Road, Paris</td>
+        </tr>
+        <tr>
+          <td>Addis</td>
+          <td>Jan 25, 2022</td>
+          <td>3022 Amsterdam Road, Paris</td>
+        </tr>
+      </table>
+    </main>
+  </body>
+</html>
+
+<!-- <a class="view-product"><span class="view-product-add">&#43;</span></a>
+<div class="nav-icons">
+  <i class="fas fa-search"></i>
+  <i class="fas fa-user"></i>
+  <i class="fas fa-shopping-bag"></i>
+</div>
+<i class="fas fa-bars"></i>
+<div class="social-icons">
+  <i class="fab fa-facebook-square"></i>
+  <i class="fab fa-instagram"></i>
+  <i class="fab fa-twitter"></i>
+</div>
+
+<button class="btn btn-cart">
+  <i class="fas fa-shopping-cart"></i> Add To Cart
+</button>
+<button class="btn">Checkout</button>
+<button class="btn">Continue</button>
+<div class="sizes">
+  <span class="size-btn size-active">XS</span>
+  <span class="size-btn">SM</span>
+  <span class="size-btn">MD</span>
+  <span class="size-btn">LG</span>
+</div>
+<div class="colors">
+  <span class="color color-active"></span>
+  <span class="color"></span>
+  <span class="color"></span>
+  <span class="color"></span>
+  <span class="color"></span>
+  <span class="color"></span>
+  <span class="color"></span>
+  <span class="color"></span>
+</div> -->
