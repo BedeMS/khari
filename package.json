@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html product.html selection.html checkout.html",
-    "build": "parcel build index.html --public-url  ./"
+    "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "Bede Sahlu",
   "license": "ISC",
