@@ -11,10 +11,6 @@ export default class View {
     this._parentElement.insertAdjacentHTML("afterbegin", markup);
   }
 
-  addHandlerRender(handler) {
-    window.addEventListener("load", handler);
-  }
-
   _clear() {
     // if (this._parentElement.innerHTML === "") return;
     return (this._parentElement.innerHTML = "");
