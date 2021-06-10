@@ -1,0 +1,28 @@
+// color palette
+$color-dark-1: #000000;
+$color-light-1: #ffffff;
+$color-light-2: #EEA84F;
+$color-light-3: #357B72;
+
+@mixin fontXl {};
+@mixin fontLg {
+    font-size: 6rem
+};
+@mixin fontMd {
+    font-size: 4rem
+};
+@mixin fontSm {};
+@mixin fontXs {};
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
