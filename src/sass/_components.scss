@@ -1,0 +1,138 @@
+// color palette
+$color-dark-1: #000000;
+$color-light-1: #ffffff;
+$color-light-2: #eea84f;
+$color-light-3: #357b72;
+
+@mixin fontXl {
+}
+@mixin fontLg {
+  font-size: 6rem;
+}
+@mixin fontMd {
+  font-size: 4rem;
+}
+@mixin fontSm {
+}
+@mixin fontXs {
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Navigation
+.nav {
+  position: absolute;
+  top: 0;
+  left: -30%;
+  height: 100%;
+  width: 30%;
+  background-color: #000000;
+
+  a.nav__logo {
+    display: block;
+    width: 75%;
+    margin: 2rem auto;
+  }
+
+  &__list {
+    height: auto;
+    max-height: 100%;
+    width: 60%;
+    text-align: center;
+    margin: 4rem auto;
+    border: 2px solid red;
+
+    &-item {
+      display: inline-block;
+      color: $color-light-1;
+      @include fontLg;
+      margin: 3rem 0;
+      transition: color 0.3s ease-in-out;
+
+      &:hover,
+      &:focus {
+        color: $color-light-2;
+      }
+    }
+  }
+}
+
+// header
+.header {
+  &__nav {
+    margin-left: 5rem;
+    i.fas {
+      font-size: 6rem;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  &__menu {
+    &-item {
+      display: inline-block;
+      @include fontMd;
+      margin: 0 2rem;
+      transition: all 2s ease-in;
+      &:hover {
+        transform: rotateX(360deg);
+      }
+    }
+  }
+  &__user {
+    margin-right: 5rem;
+    display: flex;
+    align-items: center;
+
+    & * {
+      margin: 0 5px;
+    }
+
+    &-search {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .search-input {
+        width: 0;
+        // padding: none;
+        padding: 1rem 1rem;
+        visibility: hidden;
+        border-radius: 13px;
+        border: 1px solid $color-dark-1;
+        transition: all 0.5s ease-in;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .search-icon {
+        position: absolute;
+        right: 0;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &:focus-within .search-input {
+        visibility: visible;
+        width: 20rem;
+        // padding: 1rem 1rem;
+      }
+    }
+  }
+}

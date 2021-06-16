@@ -11,17 +11,16 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="/src/sass/main.scss" />
+    <!-- <link rel="stylesheet" href="/dist/css/main.css"> -->
     <title>Khari - Africa's Favorite Brand</title>
   </head>
   <body>
+    <!-- Sliding Nav -->
     <nav role="navigation" aria-label="Main menu" class="nav">
+      <a href="#" aria-label="Home Page" class="nav__logo">
+        <img alt="Khari Logo" src="src/assets/img/KhariTextWhite.png" />
+      </a>
       <ul class="nav__list">
-        <li>
-          <a href="#" aria-label="Home Page" class="nav__list-item">
-            <img alt="Khari Logo" src="src/assets/img/KhariTextWhite.png">
-            </a
-          >
-        </li>
         <li>
           <a href="#" aria-label="View Men's Clothe" class="nav__list-item"
             >Man</a
@@ -45,12 +44,13 @@
             >Pop-Ups</a
           >
         </li>
-        
       </ul>
     </nav>
+
+    <!-- Header -->
     <header role="banner" aria-label="Top Menu" class="header">
       <button class="header__nav" aria-label="Open Navigation" type="button">
-        <i class="fad fa-bars"></i>
+        <i class="fas fa-bars"></i>
       </button>
       <div class="header__menu">
         <a href="#" aria-label="View Men's Clothe" class="header__menu-item"
@@ -61,16 +61,41 @@
         >
       </div>
       <div class="header__user">
-        <button class="header__nav" aria-label="Search for item" type="button">
-          <i class="fad fa-bars"></i>
-        </button>
-        <a href="#" aria-label="Go To Your Cart" class="header__user-cart"
-          >Woman</a
-        >
+        <div class="header__user-search">
+          <input
+            aria-label="Search for an item"
+            class="search-input"
+            type="text"
+          />
+          <button
+            class="search-icon"
+            aria-label="Search for item"
+            type="button"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+
+        <!-- <button class="header__user-profile" aria-label="Search for item" type="button">
+          <i class="fas fa-user"></i>
+        </button> -->
+        <a href="#" class="header__user-cart" aria-label="View my cart">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
       </div>
     </header>
-    <main role="main" class="main">
 
+    <!-- Main Section -->
+    <main role="main" class="main">
+      <div class="home">
+        <h1 class="home__title">Khari</h1>
+        <p class="home__subheading">Our New Collection</p>
+      </div>
+      <img src="" alt="Khari model wearing our t-shirt with the logo" />
+      <div class="offer">
+        <a href="#" class="offer__popup">Next Pop Up: Paris</a>
+        <button class="offer__sale">20% Off our Hoodies</button>
+      </div>
     </main>
   </body>
 </html>
