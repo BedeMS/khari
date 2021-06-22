@@ -86,9 +86,6 @@ $color-light-3: #357b72;
       @include fontMd;
       margin: 0 2rem;
       transition: all 2s ease-in;
-      &:hover {
-        transform: rotateX(360deg);
-      }
     }
   }
   &__user {

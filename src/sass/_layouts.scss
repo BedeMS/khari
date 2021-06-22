@@ -1,8 +1,15 @@
 .header {
   width: 100vw;
-  height: 8rem;
+  height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.home-main {
+  width: 100vw;
+  height: 90vh;
+  @include flex-column;
+  background-color: $color-light-3;
+  position: relative;
+}
