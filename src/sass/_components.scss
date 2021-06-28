@@ -86,6 +86,11 @@ $color-light-3: #357b72;
       @include fontMd;
       margin: 0 2rem;
       transition: all 2s ease-in;
+
+      &.header-active {
+        @include fontLg;
+        text-decoration: underline;
+      }
     }
   }
   &__user {
@@ -132,4 +137,10 @@ $color-light-3: #357b72;
       }
     }
   }
+}
+
+
+// Featured Item Component 
+.featured__item {
+  
 }

@@ -24,14 +24,13 @@
   align-items: center;
   z-index: 2;
 
-
   * {
     @include flex-row;
     background-color: rgba(0, 0, 0, 0.2);
     height: 100%;
     width: 50%;
     text-align: center;
-    @include fontXs;
+    @include fontSm;
     font-weight: 600;
     transition: all 0.3s ease-in;
 
@@ -47,8 +46,8 @@
 }
 
 .home__image {
-    position: absolute;
-    height: 100%;
-    width: auto;
-    z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: auto;
+  z-index: 1;
 }
