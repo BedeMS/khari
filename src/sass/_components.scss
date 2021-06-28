@@ -139,8 +139,40 @@ $color-light-3: #357b72;
   }
 }
 
-
-// Featured Item Component 
+// Featured Item Component
 .featured__item {
-  
+  width: 20rem;
+  height: 5rem;
+  background-color: $color-light-2;
+  border: 2px solid $color-dark-1;
+  @include flex-column;
+  justify-content: space-evenly;
+  transition: all 0.8s ease-in;
+
+  &-title {
+    color: $color-dark-1;
+    font-size: 3rem;
+    transition: all 0.4s ease-in;
+  }
+
+  &-description {
+    display: none;
+    @include fontXs;
+  }
+
+  &:hover,
+  &:focus     {
+    background-color: $color-dark-1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    height: 10rem;
+  }
+  &:hover > .featured__item-title,
+  &:focus > .featured__item-title {
+    color: $color-light-1;
+  }
+  &:hover > .featured__item-description,
+  &:focus > .featured__item-description {
+    display: inline-block;
+    color: $color-light-1;
+  }
 }

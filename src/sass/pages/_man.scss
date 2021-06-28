@@ -18,6 +18,19 @@
     height: 100%;
     width: auto;
   }
+
+  // featured item is on the componenets page
+}
+
+.featured__item.man-featured-item-1 {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+.featured__item.man-featured-item-2 {
+  position: absolute;
+  top: 60%;
+  right: 10%;
 }
 
 .categories {
