@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/src/sass/main.scss" />
+    <!-- <link rel="stylesheet" href="/dist/css/main.css"> -->
+    <title>Khari - Africa's Favorite Brand</title>
+  </head>
+  <body>
+    <!-- Sliding Nav -->
+    <nav role="navigation" aria-label="Main menu" class="nav">
+      <a href="#" aria-label="Home Page" class="nav__logo">
+        <img alt="Khari Logo" src="src/assets/img/KhariTextWhite.png" />
+      </a>
+      <ul class="nav__list">
+        <li>
+          <a
+            href="man.html"
+            aria-label="View Men's Clothe"
+            class="nav__list-item"
+            >Man</a
+          >
+        </li>
+        <li>
+          <a
+            href="woman.html"
+            aria-label="View Women's Clothe"
+            class="nav__list-item"
+            >Woman</a
+          >
+        </li>
+        <li>
+          <a
+            href="about.html"
+            aria-label="Learn about us"
+            class="nav__list-item"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="popup.html"
+            aria-label="Our next pop-ups locations"
+            class="nav__list-item"
+            >Pop-Ups</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Header -->
+    <header role="banner" aria-label="Top Menu" class="header">
+      <button class="header__nav" aria-label="Open Navigation" type="button">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="header__menu">
+        <a
+          href="man.html"
+          aria-label="View Men's Clothe"
+            class="header__menu-item"
+          >Man</a
+        >
+        <a
+          href="woman.html"
+          aria-label="View Women's Clothe"
+          class="header__menu-item header-active"
+          >Woman</a
+        >
+      </div>
+      <div class="header__user">
+        <div class="header__user-search">
+          <input
+            aria-label="Search for an item"
+            class="search-input"
+            type="text"
+          />
+          <button
+            class="search-icon"
+            aria-label="Search for item"
+            type="button"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+
+        <!-- <button class="header__user-profile" aria-label="Search for item" type="button">
+          <i class="fas fa-user"></i>
+        </button> -->
+        <a href="#" class="header__user-cart" aria-label="View my cart">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <main role="main" class="woman-main">
+      <div class="featured featured-woman">
+        <img
+          src="./src/assets/img/femaleModel.png"
+          alt="Khari male model wearing Khari Jacket and Khari T-shirt"
+          class="featured__woman-image"
+        />
+        <div class="featured__item woman__featured-item woman-featured-item-1">
+          <a
+            href="#"
+            aria-label="Go to Product Page"
+            class="featured__item-title"
+            >Item Name</a
+          >
+          <p class="featured__item-desc">Working on the Price</p>
+        </div>
+      </div>
+      <div class="categories">
+        <div class="category" id="1">
+          <img
+            src="./src/assets/img/t-shirt.png"
+            alt="***Name of Catgory***"
+            class="category__img"
+          />
+          <a href="#" class="category__title">Category Title</a>
+        </div>
+    </main>
+    <script src="./src/js/controller.js"></script>
+  </body>
+</html>

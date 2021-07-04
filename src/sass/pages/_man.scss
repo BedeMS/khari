@@ -1,9 +1,3 @@
-.man-main {
-  display: flex;
-  width: 100vw;
-  height: 90vh;
-}
-
 .featured {
   width: 60%;
   height: 100%;
@@ -22,7 +16,11 @@
   // featured item is on the components page
 }
 
-// Featured Items
+// Man Featured Items
+.man__featured-item {
+  background-color: rgba($color-light-2, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
 
 .featured__item.man-featured-item-1 {
   top: 20%;
@@ -50,6 +48,7 @@
   height: auto;
   margin-bottom: 3rem;
   @include flex-column;
+  border-bottom: 3px solid $color-light-2;
 
   & img {
     height: 65%;
@@ -58,7 +57,14 @@
   }
 
   &__title {
+    color: $color-light-3;
     @include fontSm;
-    margin-top: 1.5rem;
+    margin: 1.5rem 0;
+    transition: all 0.4s ease-in;
+
+    &:hover {
+      transform: scale(1.1);
+      color: $color-light-2;
+    }
   }
 }

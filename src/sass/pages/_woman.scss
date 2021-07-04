@@ -1,0 +1,23 @@
+.featured {
+  &.featured-woman {
+    background-color: $color-light-3;
+  }
+  &__woman-image {
+    position: absolute;
+    bottom: -10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: auto;
+  }
+}
+
+// Woman Featured Items
+.woman__featured-item {
+  background-color: rgba($color-light-3, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+.featured__item.woman-featured-item-1 {
+  bottom: 20%;
+  left: 10%;
+}
