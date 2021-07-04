@@ -1,7 +1,7 @@
 .man-main {
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 90vh;
 }
 
 .featured {
@@ -12,29 +12,53 @@
 
   &__man-image {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     height: 100%;
     width: auto;
   }
 
-  // featured item is on the componenets page
+  // featured item is on the components page
 }
 
+// Featured Items
+
 .featured__item.man-featured-item-1 {
-  position: absolute;
-  top: 10%;
+  top: 20%;
   left: 10%;
 }
 .featured__item.man-featured-item-2 {
-  position: absolute;
   top: 60%;
   right: 10%;
 }
 
+// Man Categories Sections
 .categories {
   width: 40%;
   height: 100%;
+  overflow-y: auto;
+  @include flex-row;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: rgba(#d7d7d7, 0.2);
+}
+
+.category {
+  width: 45%;
+  height: auto;
+  margin-bottom: 3rem;
   @include flex-column;
+
+  & img {
+    height: 65%;
+    width: auto;
+    max-width: 100%;
+  }
+
+  &__title {
+    @include fontSm;
+    margin-top: 1.5rem;
+  }
 }

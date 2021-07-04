@@ -145,6 +145,8 @@ $color-light-3: #357b72;
   height: 5rem;
   background-color: $color-light-2;
   border: 2px solid $color-dark-1;
+  border-radius: 13px;
+  position: absolute;
   @include flex-column;
   justify-content: space-evenly;
   transition: all 0.8s ease-in;
@@ -161,7 +163,7 @@ $color-light-3: #357b72;
   }
 
   &:hover,
-  &:focus     {
+  &:focus {
     background-color: $color-dark-1;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     height: 10rem;
