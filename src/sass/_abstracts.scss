@@ -4,6 +4,10 @@ $color-light-1: #ffffff;
 $color-light-2: #eea84f;
 $color-light-3: #357b72;
 
+@mixin border {
+  border: 2px solid red;
+}
+
 @mixin fontXl {
   font-size: 10rem;
 }

@@ -94,21 +94,104 @@
         <!-- <button class="header__user-profile" aria-label="Search for item" type="button">
           <i class="fas fa-user"></i>
         </button> -->
-        <a href="#" class="header__user-cart" aria-label="View my cart">
+        <a href="cart.html" class="header__user-cart" aria-label="View my cart">
           <i class="fas fa-shopping-cart"></i>
         </a>
       </div>
     </header>
 
     <!-- Main Section -->
-    <main role="main" class="man-main">
-      <div class="featured featured-man">
-        <img
-          src="./src/assets/img/model2.png"
-          alt="Khari male model wearing Khari Jacket and Khari T-shirt"
-          class="featured__man-image"
-        />
-        <div class="featured__item man__featured-item man-featured-item-1">
+    <main role="main" class="categories-main">
+      <div class="featured">
+        <div class="featured__main">
+          <div class="featured__main-desc">
+            <h2 class="featured__main-title">Newest T-Shirts</h2>
+            <button type="button" class="btn featured__main-btn">
+              Shop Now
+            </button>
+            <img
+              src="./src/assets/img/KhariLogoWhite.png"
+              alt="Khari Logo"
+              class="featured__main-logo"
+            />
+          </div>
+          <img
+            src="./src/assets/img/model2.png"
+            alt="Khari male model wearing Khari Jacket and Khari T-shirt"
+            class="featured__main-image"
+          />
+        </div>
+        <div class="featured__bottom">
+          <div class="featured__bottom-box">
+            <p class="featured__bottom-title">Accessories</p>
+            <img
+              src="./src/assets/img/hat.png"
+              alt="Khari Hat"
+              class="featured__box-img"
+            />
+            <a
+              href="#"
+              aria-label="Shop for Accessories"
+              class="featured__bottom-link"
+              >--Shop Now</a
+            >
+          </div>
+          <div class="featured__bottom-box">
+            <img
+              src="./src/assets/img/maleModel3.png"
+              alt="Khari Hat"
+              class="featured__box-img"
+            />
+            <p class="featured__bottom-title">Designer Sweaters</p>
+            <a
+              href="#"
+              aria-label="Shop for Designer Sweaters"
+              class="featured__bottom-link"
+              >--Shop Now</a
+            >
+          </div>
+          <div class="featured__bottom-box">
+            <img
+              src="./src/assets/img/glasses.png"
+              alt="Khari Hat"
+              class="featured__box-img"
+            />
+            <p class="featured__bottom-title">Essentials</p>
+            <a
+              href="#"
+              aria-label="Shop for Essentials"
+              class="featured__bottom-link"
+              >--Shop Now</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- CATEGORIES SECTIONS -->
+      <div class="categories">
+        <div class="category" id="1">
+          <img
+            src="./src/assets/img/t-shirt.png"
+            alt="***Name of Catgory***"
+            class="category__img"
+          />
+          <a href="#" class="category__title">Category Title</a>
+        </div>
+        <div class="category" id="1">
+          <img
+            src="./src/assets/img/t-shirt.png"
+            alt="***Name of Catgory***"
+            class="category__img"
+          />
+          <a href="#" class="category__title">Category Title</a>
+        </div>
+      </div>
+    </main>
+    <script src="./src/js/controller.js"></script>
+  </body>
+</html>
+
+<!-- <div class="featured__item man__featured-item man-featured-item-1">
           <a
             href="#"
             aria-label="Go to Product Page"
@@ -125,18 +208,4 @@
             >Item Name</a
           >
           <p class="featured__item-desc">Working on the Price</p>
-        </div>
-      </div>
-      <div class="categories">
-        <div class="category" id="1">
-          <img
-            src="./src/assets/img/t-shirt.png"
-            alt="***Name of Catgory***"
-            class="category__img"
-          />
-          <a href="#" class="category__title">Category Title</a>
-        </div>
-    </main>
-    <script src="./src/js/controller.js"></script>
-  </body>
-</html>
+        </div> -->

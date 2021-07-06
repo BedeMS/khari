@@ -57,24 +57,26 @@
     </nav>
 
     <!-- Header -->
-    <header role="banner" aria-label="Top Menu" class="header">
+    <header
+      role="banner"
+      aria-label="Top Menu"
+      class="header selection__header"
+    >
       <button class="header__nav" aria-label="Open Navigation" type="button">
         <i class="fas fa-bars"></i>
       </button>
       <div class="header__menu">
         <a
-          href="man.html"
-          aria-label="View Men's Clothe"
-          class="header__menu-item"
-          >Man</a
-        >
-        <a
           href="woman.html"
-          aria-label="View Women's Clothe"
-          class="header__menu-item"
+          aria-label="View Men's Clothe"
+          class="header__menu-item header-active"
           >Woman</a
         >
+        <p aria-label="Selection Category" class="header__menu-item">T-Shirt</p>
       </div>
+      <a href="index.html">
+        <img class="header__logo" src="./src/assets/img/KhariLogoDark.png" />
+      </a>
       <div class="header__user">
         <div class="header__user-search">
           <input
@@ -92,8 +94,8 @@
         </div>
 
         <!-- <button class="header__user-profile" aria-label="Search for item" type="button">
-          <i class="fas fa-user"></i>
-        </button> -->
+            <i class="fas fa-user"></i>
+          </button> -->
         <a href="cart.html" class="header__user-cart" aria-label="View my cart">
           <i class="fas fa-shopping-cart"></i>
         </a>
@@ -101,19 +103,64 @@
     </header>
 
     <!-- Main Section -->
-    <main role="main" class="home-main">
-      <div class="home">
-        <h1 class="home__title">Khari</h1>
-        <p class="home__subheading">Our New Collection</p>
-      </div>
-      <img
-        class="home__image"
-        src="./src/assets/img/maleModel.png"
-        alt="Khari model wearing our t-shirt with the logo"
-      />
-      <div class="offer">
-        <a href="popup.html" class="offer__popup">Next Pop Up: Paris</a>
-        <button class="offer__sale">20% Off our Hoodies</button>
+    <main role="main" class="selection-main">
+      <div class="selections">
+        <div class="select">
+          <img
+            src="./src/assets/img/t-shirt.png"
+            alt="***Name of T-Shirt***"
+            class="select__img"
+          />
+          <a href="#" class="select__title">Crew</a>
+        </div>
+        <div class="select">
+          <img
+            src="./src/assets/img/t-shirt.png"
+            alt="***Name of T-Shirt***"
+            class="select__img"
+          />
+          <a href="#" class="select__title">Crew</a>
+        </div>
+        <div class="select">
+          <img
+            src="./src/assets/img/t-shirt.png"
+            alt="***Name of T-Shirt***"
+            class="select__img"
+          />
+          <a href="#" class="select__title">Crew</a>
+        </div>
+        <div class="select">
+          <img
+            src="./src/assets/img/t-shirt.png"
+            alt="***Name of T-Shirt***"
+            class="select__img"
+          />
+          <a href="#" class="select__title">Crew</a>
+        </div>
+        <div class="select">
+          <img
+            src="./src/assets/img/t-shirt.png"
+            alt="***Name of T-Shirt***"
+            class="select__img"
+          />
+          <a href="#" class="select__title">Crew</a>
+        </div>
+        <div class="select">
+          <img
+            src="./src/assets/img/t-shirt.png"
+            alt="***Name of T-Shirt***"
+            class="select__img"
+          />
+          <a href="#" class="select__title">Crew</a>
+        </div>
+        <div class="select">
+          <img
+            src="./src/assets/img/t-shirt.png"
+            alt="***Name of T-Shirt***"
+            class="select__img"
+          />
+          <a href="#" class="select__title">Crew</a>
+        </div>
       </div>
     </main>
     <script src="./src/js/controller.js"></script>

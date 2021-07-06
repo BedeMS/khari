@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/src/sass/main.scss" />
+    <!-- <link rel="stylesheet" href="/dist/css/main.css"> -->
+    <title>Khari - Africa's Favorite Brand</title>
+  </head>
+  <body>
+    <!-- Sliding Nav -->
+    <nav role="navigation" aria-label="Main menu" class="nav">
+      <a href="#" aria-label="Home Page" class="nav__logo">
+        <img alt="Khari Logo" src="src/assets/img/KhariTextWhite.png" />
+      </a>
+      <ul class="nav__list">
+        <li>
+          <a
+            href="man.html"
+            aria-label="View Men's Clothe"
+            class="nav__list-item"
+            >Man</a
+          >
+        </li>
+        <li>
+          <a
+            href="woman.html"
+            aria-label="View Women's Clothe"
+            class="nav__list-item"
+            >Woman</a
+          >
+        </li>
+        <li>
+          <a
+            href="about.html"
+            aria-label="Learn about us"
+            class="nav__list-item"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="popup.html"
+            aria-label="Our next pop-ups locations"
+            class="nav__list-item"
+            >Pop-Ups</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Header -->
+    <header
+      role="banner"
+      aria-label="Top Menu"
+      class="header selection__header"
+    >
+      <button class="header__nav" aria-label="Open Navigation" type="button">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="header__menu">
+        <a
+          href="woman.html"
+          aria-label="View Men's Clothe"
+          class="header__menu-item header-active"
+          >Woman</a
+        >
+        <a href="#" aria-label="Selection Category" class="header__menu-item"
+          >T-Shirt</a
+        >
+      </div>
+      <a href="index.html">
+        <img class="header__logo" src="./src/assets/img/KhariLogoDark.png" />
+      </a>
+      <div class="header__user">
+        <div class="header__user-search">
+          <input
+            aria-label="Search for an item"
+            class="search-input"
+            type="text"
+          />
+          <button
+            class="search-icon"
+            aria-label="Search for item"
+            type="button"
+          >
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+
+        <!-- <button class="header__user-profile" aria-label="Search for item" type="button">
+            <i class="fas fa-user"></i>
+          </button> -->
+        <a href="cart.html" class="header__user-cart" aria-label="View my cart">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Section -->
+    <main role="main" class="product-main">
+      <div class="product__desc">
+        <h1 class="product__desc-title">Crew</h1>
+        <p class="product__desc-description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum fugit
+          ducimus nostrum labore corporis consectetur quis sapiente minus. Totam
+          delectus est voluptatem, quidem reiciendis, minus doloribus quasi
+          tenetur dolores et ratione perferendis nisi dolore deserunt nam rerum
+          ullam architecto animi minima maxime nostrum! Molestias doloribus
+          excepturi at iure id similique ut quasi molestiae ullam voluptatem.
+          Nobis maxime vitae sunt voluptatum?
+        </p>
+        <p class="product__desc-price">$15</p>
+        <div class="product__desc-images">
+          <img
+            class="desc__image"
+            alt="***Product Photo"
+            src="./src/assets/img/t-shirt.png"
+          />
+          <img
+            class="desc__image"
+            alt="***Product Photo"
+            src="./src/assets/img/t-shirt.png"
+          />
+          <img
+            class="desc__image"
+            alt="***Product Photo"
+            src="./src/assets/img/hat.png"
+          />
+        </div>
+      </div>
+      <div class="product__img">
+        <img
+          class="product__img-image"
+          alt="***Product Photo"
+          src="./src/assets/img/t-shirt.png"
+        />
+      </div>
+      <div class="product__pref">
+        <div class="product__sizes">
+          <label class="product__pref-title">Sizes</label>
+          <div class="sizes">
+            <button class="sizes__btn">XS</button>
+            <button class="sizes__btn">SM</button>
+            <button class="sizes__btn">MD</button>
+            <button class="sizes__btn">LG</button>
+          </div>
+        </div>
+        <div class="product__colors">
+          <label class="product__pref-title">Colors</label>
+          <div class="colors">
+            <button aria-label="**Name Of Color" class="colors__btn"></button>
+            <button aria-label="**Name Of Color" class="colors__btn"></button>
+            <button aria-label="**Name Of Color" class="colors__btn"></button>
+            <button aria-label="**Name Of Color" class="colors__btn"></button>
+            <button aria-label="**Name Of Color" class="colors__btn"></button>
+            <button aria-label="**Name Of Color" class="colors__btn"></button>
+          </div>
+        </div>
+        <div class="product__quantity">
+          <label class="product__pref-title">Quantity</label>
+          <input type="number" class="quantity" min="1" />
+        </div>
+        <button type="button" class="btn add-to-cart">Add To Cart</button>
+      </div>
+    </main>
+    <script src="./src/js/controller.js"></script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+.selections {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+  height: 90%;
+  padding: 2rem;
+  //   border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.select {
+  height: 45%;
+  width: 50rem;
+  background-color: #cacaca;
+  padding: 0 1rem;
+  @include flex-column;
+  justify-content: space-evenly;
+  position: relative;
+  border-radius: 13px;
+  margin: 0 1rem;
+  transition: all 0.4s ease-in;
+
+  &:hover,
+  &:focus {
+    background-color: #fdfdfd;
+  }
+
+  &:hover > &__img,
+  &:focus > &__img {
+    height: 95%;
+  }
+
+  &:hover > &__title,
+  &:focus > &__title {
+    color: $color-light-3;
+  }
+
+  &__img {
+    height: 90%;
+    width: auto;
+    transition: all 0.4s ease-in;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    @include fontXl;
+    color: $color-light-1;
+    transition: all 0.4s ease-out;
+  }
+}
+
+// *** HIDE SCROLL BAR FOR SELECTIONS
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.selections::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.selections {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

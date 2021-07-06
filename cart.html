@@ -57,65 +57,21 @@
     </nav>
 
     <!-- Header -->
-    <header role="banner" aria-label="Top Menu" class="header">
+    <header
+      role="banner"
+      aria-label="Top Menu"
+      class="header selection__header"
+    >
       <button class="header__nav" aria-label="Open Navigation" type="button">
         <i class="fas fa-bars"></i>
       </button>
-      <div class="header__menu">
-        <a
-          href="man.html"
-          aria-label="View Men's Clothe"
-          class="header__menu-item"
-          >Man</a
-        >
-        <a
-          href="woman.html"
-          aria-label="View Women's Clothe"
-          class="header__menu-item"
-          >Woman</a
-        >
-      </div>
-      <div class="header__user">
-        <div class="header__user-search">
-          <input
-            aria-label="Search for an item"
-            class="search-input"
-            type="text"
-          />
-          <button
-            class="search-icon"
-            aria-label="Search for item"
-            type="button"
-          >
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-
-        <!-- <button class="header__user-profile" aria-label="Search for item" type="button">
-          <i class="fas fa-user"></i>
-        </button> -->
-        <a href="cart.html" class="header__user-cart" aria-label="View my cart">
-          <i class="fas fa-shopping-cart"></i>
-        </a>
-      </div>
+      <a href="index.html">
+        <img class="header__logo" src="./src/assets/img/KhariLogoDark.png" />
+      </a>
     </header>
 
     <!-- Main Section -->
-    <main role="main" class="home-main">
-      <div class="home">
-        <h1 class="home__title">Khari</h1>
-        <p class="home__subheading">Our New Collection</p>
-      </div>
-      <img
-        class="home__image"
-        src="./src/assets/img/maleModel.png"
-        alt="Khari model wearing our t-shirt with the logo"
-      />
-      <div class="offer">
-        <a href="popup.html" class="offer__popup">Next Pop Up: Paris</a>
-        <button class="offer__sale">20% Off our Hoodies</button>
-      </div>
-    </main>
+    <main role="main" class="cart-main"></main>
     <script src="./src/js/controller.js"></script>
   </body>
 </html>
