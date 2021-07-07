@@ -231,3 +231,20 @@
   flex-direction: column;
   justify-content: space-around;
 }
+
+.checkout__checkbox {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid $color-dark-1;
+  background-color: $color-light-4;
+}
+
+.form__group.form-row {
+  flex-direction: row;
+  align-items: flex-end;
+
+  .checkout__label {
+    margin-right: 1rem;
+    line-height: .8;
+  }
+}
