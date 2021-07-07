@@ -71,7 +71,28 @@
     </header>
 
     <!-- Main Section -->
-    <main role="main" class="cart-main"></main>
+    <main role="main" class="cart-main">
+      <div class="cart">
+        <p class="cart__title">Shopping Cart</p>
+        <p class="cart__desc">You have 8 items in your cart</p>
+        <div class="cart__item">
+          <img
+            class="cart__item-img"
+            src="./src/assets/img/t-shirt.png"
+            alt="***Product Name"
+          />
+          <div class="cart__item-desc">
+            <a href="product.html" class="item__title">One Item T-Shirt</a>
+            <p class="item__desc">One Item T-Shirt</p>
+          </div>
+          <input min="1" type="number" class="cart__item-quantity" />
+          <p class="cart__item-price">$502</p>
+          <button class="cart__item-remove">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+      </div>
+    </main>
     <script src="./src/js/controller.js"></script>
   </body>
 </html>

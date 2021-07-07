@@ -26,10 +26,16 @@
 }
 
 .selection-main,
-.product-main {
+.product-main,
+.cart-main {
   width: 100vw;
   height: 90vh;
   background-color: $color-dark-1;
   @include flex-row;
 }
 
+.cart-main {
+justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #ebe9e9;
+}

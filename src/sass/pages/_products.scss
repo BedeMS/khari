@@ -135,10 +135,10 @@
 
 .quantity {
   margin: 1rem 0;
-  @include fontSm;
+  @include fontXs;
   color: $color-light-1;
   width: 6rem;
-  padding: 0.5rem 0.5rem;
+  padding: 1rem 0.5rem;
   background-color: #f2f2f242;
   border: none;
 
