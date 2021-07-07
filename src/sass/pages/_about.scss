@@ -1,0 +1,51 @@
+.about {
+  width: 75%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $color-light-4;
+  overflow-y: auto;
+}
+
+.about__box {
+  width: 40%;
+  min-height: 30rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 13px;
+  background-color: $color-dark-1;
+  color: $color-light-1;
+
+  &-title {
+    display: block;
+    color: $color-light-1;
+    @include fontLg;
+    font-weight: 700;
+    margin-bottom: 2rem;
+
+    &:hover,
+    &:focus {
+      color: $color-light-3;
+      outline: none;
+    }
+  }
+
+  &-desc {
+    @include fontXs;
+    line-height: 1.5;
+  }
+}
+
+.about::-webkit-scrollbar {
+  width: 2px;
+}
+
+.about::-webkit-scrollbar-track {
+  background-color: $color-dark-1;
+}
+
+.about::-webkit-scrollbar-thumb {
+  background-color: $color-light-2;
+  outline: 1px solid $color-dark-1;
+}
