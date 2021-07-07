@@ -57,12 +57,25 @@
 
 // *** HIDE SCROLL BAR FOR SELECTIONS
 
-/* Hide scrollbar for Chrome, Safari and Opera */
 .selections::-webkit-scrollbar {
-  display: none;
+  height: 2px;
 }
-/* Hide scrollbar for IE, Edge and Firefox */
-.selections {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+
+.selections::-webkit-scrollbar-track {
+  background-color: $color-dark-1;
 }
+
+.selections::-webkit-scrollbar-thumb {
+  background-color: $color-light-2;
+  outline: 1px solid $color-dark-1;
+}
+
+// /* Hide scrollbar for Chrome, Safari and Opera */
+// .selections::-webkit-scrollbar {
+//   display: none;
+// }
+// /* Hide scrollbar for IE, Edge and Firefox */
+// .selections {
+//   -ms-overflow-style: none; /* IE and Edge */
+//   scrollbar-width: none; /* Firefox */
+// }

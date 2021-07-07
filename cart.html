@@ -72,6 +72,7 @@
 
     <!-- Main Section -->
     <main role="main" class="cart-main">
+      <!-- cart -->
       <div class="cart">
         <p class="cart__title">Shopping Cart</p>
         <p class="cart__desc">You have 8 items in your cart</p>
@@ -91,7 +92,147 @@
             <i class="fas fa-trash"></i>
           </button>
         </div>
+        <div class="cart__item">
+          <img
+            class="cart__item-img"
+            src="./src/assets/img/t-shirt.png"
+            alt="***Product Name"
+          />
+          <div class="cart__item-desc">
+            <a href="product.html" class="item__title">One Item T-Shirt</a>
+            <p class="item__desc">One Item T-Shirt</p>
+          </div>
+          <input min="1" type="number" class="cart__item-quantity" />
+          <p class="cart__item-price">$502</p>
+          <button class="cart__item-remove">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+        <div class="cart__item">
+          <img
+            class="cart__item-img"
+            src="./src/assets/img/t-shirt.png"
+            alt="***Product Name"
+          />
+          <div class="cart__item-desc">
+            <a href="product.html" class="item__title">One Item T-Shirt</a>
+            <p class="item__desc">One Item T-Shirt</p>
+          </div>
+          <input min="1" type="number" class="cart__item-quantity" />
+          <p class="cart__item-price">$502</p>
+          <button class="cart__item-remove">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+        <div class="cart__item">
+          <img
+            class="cart__item-img"
+            src="./src/assets/img/t-shirt.png"
+            alt="***Product Name"
+          />
+          <div class="cart__item-desc">
+            <a href="product.html" class="item__title">One Item T-Shirt</a>
+            <p class="item__desc">One Item T-Shirt</p>
+          </div>
+          <input min="1" type="number" class="cart__item-quantity" />
+          <p class="cart__item-price">$502</p>
+          <button class="cart__item-remove">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+        <div class="cart__item">
+          <img
+            class="cart__item-img"
+            src="./src/assets/img/t-shirt.png"
+            alt="***Product Name"
+          />
+          <div class="cart__item-desc">
+            <a href="product.html" class="item__title">One Item T-Shirt</a>
+            <p class="item__desc">One Item T-Shirt</p>
+          </div>
+          <input min="1" type="number" class="cart__item-quantity" />
+          <p class="cart__item-price">$502</p>
+          <button class="cart__item-remove">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+        <div class="cart__item">
+          <img
+            class="cart__item-img"
+            src="./src/assets/img/t-shirt.png"
+            alt="***Product Name"
+          />
+          <div class="cart__item-desc">
+            <a href="product.html" class="item__title">One Item T-Shirt</a>
+            <p class="item__desc">One Item T-Shirt</p>
+          </div>
+          <input min="1" type="number" class="cart__item-quantity" />
+          <p class="cart__item-price">$502</p>
+          <button aria-label="Remove Item from Cart" class="cart__item-remove">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
       </div>
+
+      <!-- checkout -->
+      <form class="checkout">
+        <p class="checkout__title">Card Details</p>
+        <div class="checkout__cards">
+          <button class="card" type="button" aria-label="Mastercard">
+            <img
+              src="./src/assets/img/cards/mastercard.png"
+              class="card__img"
+            />
+          </button>
+          <button class="card" type="button" aria-label="Visa">
+            <img src="./src/assets/img/cards/visa.png" class="card__img" />
+          </button>
+          <button class="card" type="button" aria-label="American Express">
+            <img src="./src/assets/img/cards/amex.png" class="card__img" />
+          </button>
+        </div>
+        <div class="checkout__details">
+          <div class="form__group">
+            <label for="name" class="checkout__label">Name on Card</label>
+            <input type="text" class="checkout__input" />
+          </div>
+          <div class="form__group">
+            <label for="name" class="checkout__label">Card Number</label>
+            <input type="text" class="checkout__input" />
+          </div>
+          <div class="form__group-double">
+            <div class="form__group">
+              <label for="name" class="checkout__label">Expiry Card</label>
+              <input type="month" class="checkout__input" />
+            </div>
+            <div class="form__group">
+              <label for="name" class="checkout__label">CVV</label>
+              <input type="text" class="checkout__input" />
+            </div>
+          </div>
+        </div>
+        <div class="checkout__summary">
+          <div class="summary">
+            <p class="summary__sub">Subtotal</p>
+            <p class="summary__amount">$1300.00</p>
+          </div>
+          <div class="summary">
+            <p class="summary__sub">Shipping</p>
+            <p class="summary__amount">$45.00</p>
+          </div>
+          <div class="summary">
+            <p class="summary__sub">Tax</p>
+            <p class="summary__amount">$140</p>
+          </div>
+          <div class="summary">
+            <p class="summary__sub">Total</p>
+            <p class="summary__amount">$2400</p>
+          </div>
+          <button type="button" class="btn checkout__btn">
+            Checkout <i class="fas fa-right"></i>
+          </button>
+        </div>
+      </form>
     </main>
     <script src="./src/js/controller.js"></script>
   </body>
