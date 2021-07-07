@@ -106,7 +106,7 @@
   width: 35%;
   margin: auto;
   height: 95%;
-  background-color: $color-light-3;
+  background-color: $color-light-5;
   border-radius: 13px;
 
   &__title {
@@ -116,33 +116,30 @@
     font-weight: 700;
     color: $color-light-1;
   }
+}
 
-  &__cards {
-    width: 90%;
-    height: 12.5%;
-    margin: 0 auto;
-    @include flex-row;
-    justify-content: space-between;
+// CREDIT CARD DETAILS
+.checkout__cards {
+  width: 90%;
+  height: 12.5%;
+  margin: 0 auto;
+  @include flex-row;
+  justify-content: space-between;
 
-    .card {
-      width: 30%;
-      height: 10rem;
-      border-radius: 13px;
-      border: 2px solid $color-light-4;
+  .card {
+    width: 30%;
+    height: 10rem;
+    border-radius: 13px;
+    border: 2px solid $color-light-4;
 
-      &:hover,
-      &:focus {
-        // background-color: rgba(#ffffff, 0.4);
-        border: 2px solid $color-light-1;
-      }
+    &:hover,
+    &:focus {
+      border: 2px solid $color-light-1;
+    }
 
-      img {
-        height: auto;
-        max-height: 100%;
-        // width: 90%;
-        // height: 100%;
-        // margin: 0 auto;
-      }
+    img {
+      height: auto;
+      max-height: 100%;
     }
   }
 }
@@ -154,37 +151,39 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+// CHECKOUT FORMS
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__group-double {
+  display: flex;
+  justify-content: space-between;
 
   .form__group {
-    display: flex;
-    flex-direction: column;
+    width: 45%;
   }
+}
 
-  .form__group-double {
-    display: flex;
-    justify-content: space-between;
+.checkout__label {
+  color: $color-light-1;
+  margin: 1rem 0 0.5rem;
+  @include fontXs;
+}
 
-    &:first-child {
-      width: 45%;
-    }
-  }
+.checkout__input {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(#ffffff, 0.4);
+  outline: none;
 
-  .checkout__label {
-    color: $color-light-1;
-    margin: 1rem 0 0.5rem;
-    @include fontXs;
-  }
-
-  .checkout__input {
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    border: none;
-    background-color: rgba(#ffffff, 0.4);
-    outline: none;
-
-    &:focus {
-      background-color: rgba(#ffffff, 0.8);
-    }
+  &:focus {
+    background-color: rgba(#ffffff, 0.8);
   }
 }
 
@@ -214,5 +213,21 @@
 .checkout__btn {
   width: 100%;
   margin: 1.5rem 0 0;
-  background-color: $color-light-2;
+  background-color: rgba($color-light-2, 0.8);
+  
+  &:hover,
+  &:focus {
+    background-color: $color-light-2;
+  }
+}
+
+
+// Billing Address
+.checkout__shipping {
+  width: 90%;
+  height: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
