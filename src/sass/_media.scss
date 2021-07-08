@@ -1,0 +1,63 @@
+@media screen and (max-width: 1400px) {
+  .home-main {
+  }
+}
+
+@media screen and (max-width: 1136px) {
+  .home {
+    &__title {
+      font-size: 18rem;
+    }
+
+    &__subheading {
+      @include fontSm;
+    }
+  }
+}
+
+@media screen and (max-width: 836px) {
+  .offer {
+    * {
+      @include fontXs;
+    }
+  }
+}
+
+@media screen and (max-width: 636px) {
+  .home {
+    &__title {
+      font-size: 10rem;
+    }
+  }
+
+  // header
+  .header {
+    &__nav {
+      margin-left: 1rem;
+      i.fas {
+        font-size: 4rem;
+      }
+    }
+    &__menu {
+      &-item {
+        margin: 0 0.5rem;
+      }
+    }
+
+    &__user {
+      margin-right: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home {
+    &__title {
+      font-size: 8rem;
+    }
+  }
+  .home__image {
+    height: auto;
+    width: 85%;
+  }
+}
