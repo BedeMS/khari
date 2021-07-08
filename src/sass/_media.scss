@@ -1,9 +1,24 @@
 @media screen and (max-width: 1400px) {
+  //HOME PAGE
   .home-main {
+  }
+
+  // MAN/WOMAN PAGE
+  .featured__main {
+    &-image {
+      left: 90%;
+      transform: translateX(-90%);
+    }
+  }
+  .featured__bottom-box:nth-of-type(1) {
+    .featured__box-img {
+      width: 100%;
+    }
   }
 }
 
 @media screen and (max-width: 1136px) {
+  //HOME PAGE
   .home {
     &__title {
       font-size: 18rem;
@@ -13,17 +28,68 @@
       @include fontSm;
     }
   }
+
+  // MAN/WOMAN PAGE
+  .featured {
+    width: 75%;
+  }
+  .featured__bottom-title {
+    @include fontSm;
+  }
+  .categories {
+    width: 25%;
+    height: auto;
+  }
+  .category {
+    width: 95%;
+    height: 25rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0;
+    border-radius: 13px;
+    border-bottom: none;
+
+    & img {
+      height: 80%;
+    }
+
+    &__title {
+      height: 20%;
+      @include fontXs;
+    }
+    &:hover,
+    &:focus {
+      background-color: $color-light-4;
+    }
+  }
 }
 
 @media screen and (max-width: 836px) {
+  //HOME PAGE
   .offer {
     * {
       @include fontXs;
     }
   }
+
+  // MAN/WOMAN PAGE
+  .featured {
+    width: 65%;
+  }
+  .featured__main {
+    height: 25%;
+  }
+  .featured__bottom {
+    height: 75%;
+    grid-template-columns: unset;
+    grid-template-rows: 33% 33% 33%;
+  }
+  .categories {
+      width: 35%;
+  }
 }
 
 @media screen and (max-width: 636px) {
+  //HOME PAGE
   .home {
     &__title {
       font-size: 10rem;
@@ -51,6 +117,8 @@
 }
 
 @media screen and (max-width: 500px) {
+  //HOME PAGE
+
   .home {
     &__title {
       font-size: 8rem;
