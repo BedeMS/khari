@@ -77,14 +77,96 @@
   }
   .featured__main {
     height: 25%;
+
+    &-image {
+      left: 95%;
+      transform: translateX(-95%);
+    }
+
+    &-btn {
+      padding: 1rem;
+    }
   }
+
+  .featured__main-desc {
+    transform: translate(-15%, -50%);
+
+    .featured__main-title {
+      @include fontSm;
+      width: 15rem;
+      margin: 1rem 0;
+    }
+
+    .featured__main-logo {
+      height: 150%;
+    }
+  }
+
   .featured__bottom {
     height: 75%;
     grid-template-columns: unset;
     grid-template-rows: 33% 33% 33%;
   }
+
+  .featured__bottom-box {
+    align-items: flex-start;
+  }
+
+  .featured__bottom-title,
+  .featured__bottom-link {
+    margin-left: 15%;
+    width: 10rem;
+    text-align: center;
+  }
+
+  .featured__bottom-title {
+    @include fontSm;
+    color: $color-dark-1;
+    margin-bottom: 1rem;
+  }
+
+  .featured__bottom-link {
+    color: $color-dark-1;
+
+    &:hover {
+      color: $color-light-1;
+    }
+  }
+
+  .featured__bottom-box:nth-of-type(1) {
+    background-color: rgba(#8b8b8b, 0.1);
+    position: relative;
+
+    .featured__box-img {
+      top: unset;
+      bottom: 0;
+      left: 85%;
+      transform: translateX(-85%);
+      height: 75%;
+      width: auto;
+    }
+  }
+
+  .featured__bottom-box:nth-of-type(2) {
+    .featured__box-img {
+      bottom: 0;
+      top: 0;
+      left: 75%;
+      transform: translateX(-75%);
+      width: auto;
+      height: 100%;
+    }
+    .featured__bottom-title {
+      @include fontSm;
+      color: $color-dark-1;
+    }
+    .featured__bottom-link {
+      color: $color-dark-1;
+    }
+  }
+
   .categories {
-      width: 35%;
+    width: 35%;
   }
 }
 
@@ -118,7 +200,6 @@
 
 @media screen and (max-width: 500px) {
   //HOME PAGE
-
   .home {
     &__title {
       font-size: 8rem;
@@ -127,5 +208,35 @@
   .home__image {
     height: auto;
     width: 85%;
+  }
+
+  
+
+  // MAN/WOMAN PAGE
+  .categories-main {
+    flex-direction: column;
+  }
+  .featured {
+    width: 100%;
+    height: 25%;
+  }
+
+  .featured__main {
+    width: 100%;
+    height: 100%;
+  }
+
+  .featured__bottom {
+    display: none;
+  }
+
+  .categories {
+    height: 75%;
+    width: 100%;
+    padding-top: 2rem;
+  }
+
+  .category {
+    width: 45%;
   }
 }

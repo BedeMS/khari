@@ -58,7 +58,6 @@
 }
 
 .featured__bottom-box {
-  // border-right: 4px solid $color-light-1;
   height: 100%;
   @include flex-column;
   position: relative;
@@ -87,11 +86,14 @@
   @include fontMd;
   font-style: italic;
   text-align: center;
+  z-index: 10;
 }
 
 .featured__bottom-link {
   @include fontXs;
   justify-items: flex-end;
+  z-index: 10;
+  
 }
 
 .featured__bottom-box:nth-of-type(2) {
