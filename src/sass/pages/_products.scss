@@ -29,6 +29,7 @@
     overflow-x: auto;
 
     .desc__image {
+      cursor: pointer;
       width: auto;
       // max-width: ;
       margin-left: 1rem;
@@ -46,6 +47,22 @@
   }
 }
 
+
+.product__desc-images::-webkit-scrollbar {
+  height: 2px;
+}
+
+.product__desc-images::-webkit-scrollbar-track {
+  background-color: $color-dark-1;
+}
+
+.product__desc-images::-webkit-scrollbar-thumb {
+  background-color: $color-light-3;
+  outline: 1px solid $color-dark-1;
+}
+
+
+// Product Image
 .product__img {
   &-image {
     height: 90%;
@@ -53,6 +70,7 @@
   }
 }
 
+// Product Preferences
 .product__pref {
   color: $color-light-1;
 
@@ -147,25 +165,4 @@
   }
 }
 
-// @keyframes fillBorder {
-//   0% {
-//     width: 0;
-//     height: 0;
-//   }
-//   25% {
-//     width: 25%;
-//     height: 25%;
-//   }
-//   50% {
-//     width: 50%;
-//     height: 50%;
-//   }
-//   75% {
-//     width: 75%;
-//     height: 75%;
-//   }
-//   100% {
-//     width: 110%;
-//     height: 110%;
-//   }
-// }
+
