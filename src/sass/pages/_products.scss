@@ -47,7 +47,6 @@
   }
 }
 
-
 .product__desc-images::-webkit-scrollbar {
   height: 2px;
 }
@@ -61,12 +60,13 @@
   outline: 1px solid $color-dark-1;
 }
 
-
 // Product Image
 .product__img {
   &-image {
-    height: 90%;
+    // height: 90%;
+    height: auto;
     width: auto;
+    max-width: 100%;
   }
 }
 
@@ -164,5 +164,3 @@
     outline: 1px solid $color-light-2;
   }
 }
-
-

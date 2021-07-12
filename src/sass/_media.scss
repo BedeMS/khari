@@ -15,6 +15,27 @@
       width: 100%;
     }
   }
+
+  // PRODUCT PAGE
+  .product__desc {
+    color: $color-light-1;
+    padding: 0.5rem;
+
+    &-title,
+    &-description,
+    &-images,
+    &-price {
+      width: 85%;
+    }
+  }
+
+  .product__pref {
+    .product__sizes,
+    .product__colors,
+    .product__quantity {
+      width: 85%;
+    }
+  }
 }
 
 @media screen and (max-width: 1136px) {
@@ -59,6 +80,45 @@
     &:hover,
     &:focus {
       background-color: $color-light-4;
+    }
+  }
+
+  // PRODUCT PAGE
+  .product-main {
+    flex-wrap: wrap;
+    overflow-y: auto;
+  }
+
+  .product__desc,
+  .product__img {
+    width: 50%;
+    height: 70%;
+  }
+
+  .product__pref {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0 1.5rem;
+
+    &-title {
+      width: 100%;
+      @include fontSm;
+    }
+
+    .product__sizes,
+    .product__colors,
+    .product__quantity {
+      width: 50%;
+    }
+
+    .product__quantity {
+      padding: 0;
+    }
+    .btn.add-to-cart {
+      margin-bottom: 1.5rem;
     }
   }
 }
@@ -170,6 +230,12 @@
   }
 }
 
+@media screen and (max-width: 736px) {
+  .header__logo {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 636px) {
   //HOME PAGE
   .home {
@@ -189,11 +255,102 @@
     &__menu {
       &-item {
         margin: 0 0.5rem;
+        @include fontXs;
+
+        &.header-active {
+          @include fontSm;
+        }
       }
     }
 
     &__user {
       margin-right: 1rem;
+
+      & * {
+        margin: 0 2px;
+      }
+    }
+  }
+
+  // Selection & Product Header
+  .header.selection__header {
+    position: relative;
+
+    .header__user {
+      margin-left: auto;
+    }
+  }
+
+  // SELECTIONS
+  .selections {
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    flex-direction: row;
+  }
+
+  .select {
+    margin-bottom: 2rem;
+    width: 90%;
+    height: 40%;
+
+    &__img {
+      height: auto;
+      max-height: 100%;
+      max-width: 100%;
+      transition: all 0.4s ease-in;
+    }
+  }
+
+  //PRODUCT PAGE
+  .product__desc {
+    width: 100%;
+    height: auto;
+    // flex-direction: row;
+    flex-wrap: wrap;
+    color: $color-light-1;
+    padding: 2rem;
+
+    &-title {
+      @include fontXl;
+      width: 100%;
+      text-align: center;
+    }
+
+    &-description {
+      @include fontXs;
+      width: 100%;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    &-price {
+      width: 50%;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    &-images {
+      width: 100%;
+    }
+  }
+  .product__img {
+    width: 100%;
+    height: auto;
+  }
+  .product__pref {
+    justify-content: center;
+
+    &-title {
+      text-align: center;
+    }
+
+    .product__sizes,
+    .product__colors,
+    .product__quantity {
+      width: 100%;
+      align-items: center;
     }
   }
 }
@@ -209,8 +366,6 @@
     height: auto;
     width: 85%;
   }
-
-  
 
   // MAN/WOMAN PAGE
   .categories-main {
