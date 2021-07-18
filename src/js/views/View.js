@@ -12,7 +12,6 @@ export default class View {
   }
 
   _clear() {
-    // if (this._parentElement.innerHTML === "") return;
     return (this._parentElement.innerHTML = "");
   }
 }

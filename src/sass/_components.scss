@@ -66,16 +66,17 @@
     }
   }
   &__menu {
-    &-item {
-      display: inline-block;
-      @include fontSm;
-      margin: 0 1rem 0 2rem;
-      transition: all 2s ease-in;
+    display: inline-block;
+    @include fontSm;
+    margin: 0 2rem 0 2rem;
+    transition: all 2s ease-in;
 
-      &.header-active {
-        @include fontMd;
-        text-decoration: underline;
-      }
+    &.header-active {
+      @include fontMd;
+      text-decoration: underline;
+    }
+    &-item {
+      margin: 0 2rem;
     }
   }
 
