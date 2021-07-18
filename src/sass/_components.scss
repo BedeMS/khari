@@ -23,6 +23,7 @@
   height: 100%;
   width: 30%;
   background-color: #000000;
+  z-index:  100;
 
   a.nav__logo {
     display: block;
@@ -36,7 +37,6 @@
     width: 60%;
     text-align: center;
     margin: 4rem auto;
-    border: 2px solid red;
 
     &-item {
       display: inline-block;
@@ -51,6 +51,11 @@
       }
     }
   }
+}
+
+// active
+.nav-active {
+  left: 0;
 }
 
 // header
