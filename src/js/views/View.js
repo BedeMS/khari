@@ -14,4 +14,12 @@ export default class View {
   _clear() {
     return (this._parentElement.innerHTML = "");
   }
+
+  _addClass(className, element) {
+    element.classList.add(className);
+  }
+
+  _removeClass(className, element) {
+    element.classList.remove(className);
+  }
 }

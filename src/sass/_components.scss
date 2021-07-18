@@ -23,7 +23,7 @@
   height: 100%;
   width: 30%;
   background-color: #000000;
-  z-index:  100;
+  z-index: 100;
 
   a.nav__logo {
     display: block;
@@ -51,11 +51,26 @@
       }
     }
   }
+
+  &__close {
+    position: absolute;
+    top: 6rem;
+    right: 0rem;
+    color: $color-light-1;
+    z-index: 101;
+    width: 4rem;
+    height: 4rem;
+    background-color: $color-light-2;
+  }
 }
 
 // active
 .nav-active {
   left: 0;
+}
+
+.nav__close-active {
+  right: -4rem;
 }
 
 // header
@@ -147,4 +162,3 @@
     margin-left: auto;
   }
 }
-
