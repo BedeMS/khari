@@ -1,15 +1,16 @@
 import View from "../View";
 
-class featuredMan extends View {
+class features extends View {
   _parentElement = document.querySelector(".featured");
-  _featuredMainImage = document.querySelector(".featured__main-image");
+  _featuredMainBtn = document.querySelector(".featured__main-btn");
 
   constructor() {
     super();
   }
 
-  _initRender(){
-      
+  // links for featured section
+  initRender(){
+      this._featuredMainBtn.href
   }
 }
 
