@@ -6,12 +6,9 @@ if (module.hot) {
 
 
 
-// const controlNav = function(){
-//   navigation.toggleClass();
-// }
 
 const init = function(){
-  // navigation.addHandler(controlNav)
+
 }
 
 init();

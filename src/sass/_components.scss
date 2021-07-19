@@ -86,18 +86,20 @@
     }
   }
   &__menu {
-    display: inline-block;
+    display: flex;
+    align-items: flex-end;
     @include fontSm;
-    margin: 0 2rem 0 2rem;
+    margin: 0 2rem 0 0;
     transition: all 2s ease-in;
 
-    &.header-active {
-      @include fontMd;
-      text-decoration: underline;
-    }
     &-item {
-      margin: 0 2rem;
+      margin: 0 1rem;
     }
+  }
+
+  .header__menu-item.header-active {
+    @include fontMd;
+    text-decoration: underline;
   }
 
   &__user {
