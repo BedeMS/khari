@@ -57,14 +57,10 @@
           >
         </li>
       </ul>
-    </nav>
+    </nav> 
 
     <!-- Header -->
-    <header
-      role="banner"
-      aria-label="Top Menu"
-      class="header selection__header"
-    >
+    <header role="banner" aria-label="Top Menu" class="header">
       <button class="header__nav" aria-label="Open Navigation" type="button">
         <i class="fas fa-bars"></i>
       </button>
@@ -72,16 +68,16 @@
         <a
           href="gender.html"
           aria-label="View Men's Clothe"
-          class="header__menu-item header-active"
+          class="header__menu-item header__man"
+          >Man</a
+        >
+        <a
+          href="gender.html"
+          aria-label="View Women's Clothe"
+          class="header__menu-item"
           >Woman</a
         >
-        <a href="#" aria-label="Selection Category" class="header__menu-item"
-          >T-Shirt</a
-        >
       </div>
-      <a href="index.html">
-        <img class="header__logo" src="./src/assets/img/KhariLogoDark.png" />
-      </a>
       <div class="header__user">
         <div class="header__user-search">
           <input
@@ -99,8 +95,8 @@
         </div>
 
         <!-- <button class="header__user-profile" aria-label="Search for item" type="button">
-            <i class="fas fa-user"></i>
-          </button> -->
+          <i class="fas fa-user"></i>
+        </button> -->
         <a href="cart.html" class="header__user-cart" aria-label="View my cart">
           <i class="fas fa-shopping-cart"></i>
         </a>
@@ -108,72 +104,66 @@
     </header>
 
     <!-- Main Section -->
-    <main role="main" class="product-main">
-      <div class="product__desc">
-        <h1 class="product__desc-title">Crew</h1>
-        <p class="product__desc-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum fugit
-          ducimus nostrum labore corporis consectetur quis sapiente minus. Totam
-          delectus est voluptatem, quidem reiciendis, minus doloribus quasi
-          tenetur dolores et ratione perferendis nisi dolore deserunt nam rerum
-          ullam architecto animi minima maxime nostrum! Molestias doloribus
-          excepturi at iure id similique ut quasi molestiae ullam voluptatem.
-          Nobis maxime vitae sunt voluptatum?
-        </p>
-        <p class="product__desc-price">$15</p>
-        <div class="product__desc-images">
-          <img
-            class="desc__image"
-            alt="***Product Photo"
-            src="./src/assets/img/t-shirt.png"
-          />
-          <img
-            class="desc__image"
-            alt="***Product Photo"
-            src="./src/assets/img/t-shirt.png"
-          />
-          <img
-            class="desc__image"
-            alt="***Product Photo"
-            src="./src/assets/img/hat.png"
-          />
-        </div>
+    <main role="main" class="categories-main">
+      <div class="featured">
+        
       </div>
-      <div class="product__img">
-        <img
-          class="product__img-image"
-          alt="***Product Photo"
-          src="./src/assets/img/t-shirt.png"
-        />
-      </div>
-      <div class="product__pref">
-        <div class="product__sizes">
-          <label class="product__pref-title">Sizes</label>
-          <div class="sizes">
-            <button class="sizes__btn">XS</button>
-            <button class="sizes__btn">SM</button>
-            <button class="sizes__btn">MD</button>
-            <button class="sizes__btn">LG</button>
-          </div>
+
+      <!-- CATEGORIES SECTIONS -->
+      <div class="categories">
+        <div class="category" id="1">
+          <img
+            src="./src/assets/img/t-shirt.png"
+            alt="***Name of Catgory***"
+            class="category__img"
+          />
+          <a href="#" class="category__title">Category Title</a>
         </div>
-        <div class="product__colors">
-          <label class="product__pref-title">Colors</label>
-          <div class="colors">
-            <button aria-label="**Name Of Color" class="colors__btn"></button>
-            <button aria-label="**Name Of Color" class="colors__btn"></button>
-            <button aria-label="**Name Of Color" class="colors__btn"></button>
-            <button aria-label="**Name Of Color" class="colors__btn"></button>
-            <button aria-label="**Name Of Color" class="colors__btn"></button>
-            <button aria-label="**Name Of Color" class="colors__btn"></button>
-          </div>
+        <div class="category" id="1">
+          <img
+            src="./src/assets/img/t-shirt.png"
+            alt="***Name of Catgory***"
+            class="category__img"
+          />
+          <a href="#" class="category__title">Category Title</a>
         </div>
-        <div class="product__quantity">
-          <label class="product__pref-title">Quantity</label>
-          <input type="number" class="quantity" min="1" />
+        <div class="category" id="1">
+          <img
+            src="./src/assets/img/t-shirt.png"
+            alt="***Name of Catgory***"
+            class="category__img"
+          />
+          <a href="#" class="category__title">Category Title</a>
         </div>
-        <button type="button" class="btn add-to-cart">Add To Cart</button>
+        <div class="category" id="1">
+          <img
+            src="./src/assets/img/t-shirt.png"
+            alt="***Name of Catgory***"
+            class="category__img"
+          />
+          <a href="#" class="category__title">Category Title</a>
+        </div>
       </div>
     </main>
     <script src="./src/js/controller.js"></script>
   </body>
 </html>
+
+<!-- <div class="featured__item man__featured-item man-featured-item-1">
+          <a
+            href="#"
+            aria-label="Go to Product Page"
+            class="featured__item-title"
+            >Item Name</a
+          >
+          <p class="featured__item-desc">Working on the Price</p>
+        </div>
+        <div class="featured__item man__featured-item man-featured-item-2">
+          <a
+            href="#"
+            aria-label="Go to Product Page"
+            class="featured__item-title"
+            >Item Name</a
+          >
+          <p class="featured__item-desc">Working on the Price</p>
+        </div> -->
