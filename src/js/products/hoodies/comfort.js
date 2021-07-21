@@ -1,4 +1,3 @@
-import { valueObj, getObjects } from "../../helpers";
 import uniqid from "uniqid";
 
 const comfort = {
