@@ -36,7 +36,7 @@ export const long = new Shorts("Long", 25, [
   { size: "md", color: "black", quantity: 9 },
 ]);
 
-graphic._addImages([
+long._addImages([
   {
     black: "https://i.ebayimg.com/images/g/K-kAAOSwE8daYWJo/s-l300.png",
   },
