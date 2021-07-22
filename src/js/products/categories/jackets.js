@@ -3,7 +3,7 @@ import { Jackets } from "../products";
 //----------------------------------------------------------------
 // COMFORT HOODIES
 // {Name, Price, Add Products}
-export const comfort = new Jackets("Comfort", 23, [
+export const comfort = new Jackets("Comfort", 39, [
   { size: "sm", color: "yellow", quantity: 2 },
   { size: "sm", color: "green", quantity: 4 },
   { size: "sm", color: "grey", quantity: 4 },
@@ -35,7 +35,7 @@ comfort._addImages([
 //----------------------------------------
 // GRAPHIC
 
-export const graphic = new Jackets("Graphic", 25, [
+export const graphic = new Jackets("Graphic", 54, [
   { size: "xs", color: "white", quantity: 5 },
   { size: "xs", color: "blue", quantity: 2 },
   { size: "xs", color: "grey", quantity: 8 },

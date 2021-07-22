@@ -1,43 +1,119 @@
-import { Shorts } from "../products";
+import { Sweaters } from "../products";
 
 //----------------------------------------------------------------
 // COMFORT HOODIES
 // {Name, Price, Add Products}
-export const regular = new Shorts("Regular", 15, [
-  { size: "md", color: "yellow", quantity: 5 },
-  { size: "md", color: "red", quantity: 18 },
-  { size: "md", color: "orange", quantity: 9 },
-  { size: "md", color: "white", quantity: 6 },
+export const comfort = new Sweaters("Comfort", 18, [
+  { size: "sm", color: "yellow", quantity: 2 },
+  { size: "sm", color: "green", quantity: 4 },
+  { size: "sm", color: "grey", quantity: 4 },
+  { size: "md", color: "yellow", quantity: 2 },
+  { size: "md", color: "green", quantity: 4 },
+  { size: "lg", color: "grey", quantity: 6 },
+  { size: "lg", color: "yellow", quantity: 3 },
 ]);
 
-regular._addImages([
+comfort._addImages([
+  {
+    blue:
+      "https://purepng.com/public/uploads/large/purepng.com-orange-jacketgarmentupper-bodyjacketlighterorange-1421526362216wbbfz.png",
+  },
   {
     yellow:
-      "https://www.hummel.net/dw/image/v2/BDWL_PRD/on/demandware.static/-/Sites-hummel-master-catalog/default/dwd1cbb7e4/images/packshot/111083-5007_1.png?sw=514&sh=685&sm=fit&q=80",
+      "https://purepng.com/public/uploads/large/purepng.com-orange-jacketgarmentupper-bodyjacketlighterorange-1421526362216wbbfz.png",
   },
   {
-    red:
-      "https://cdn.shopify.com/s/files/1/1682/7299/products/MASHPFM2-R_1400x.png?v=1538789801",
+    green:
+      "https://purepng.com/public/uploads/large/purepng.com-orange-jacketgarmentupper-bodyjacketlighterorange-1421526362216wbbfz.png",
   },
   {
-    orange:
-      "https://images.footlocker.com/is/3495820/large_wide/nike-team-flex-woven-pocket-2.0-shorts-mens",
-  },
-  {
-    white:
-      "https://www.transparentpng.com/thumb/shorts/nike-laser-woven-printed-shorts-adults-png-16.png",
+    grey:
+      "https://purepng.com/public/uploads/large/purepng.com-orange-jacketgarmentupper-bodyjacketlighterorange-1421526362216wbbfz.png",
   },
 ]);
 
 //----------------------------------------
 // GRAPHIC
 
-export const long = new Shorts("Long", 25, [
-  { size: "md", color: "black", quantity: 9 },
+export const slim = new Sweaters("Slim", 22, [
+  { size: "xs", color: "white", quantity: 5 },
+  { size: "xs", color: "blue", quantity: 2 },
+  { size: "xs", color: "grey", quantity: 8 },
+  { size: "sm", color: "grey", quantity: 6 },
+  { size: "sm", color: "yellow", quantity: 3 },
+  { size: "sm", color: "blue", quantity: 3 },
+  { size: "md", color: "yellow", quantity: 5 },
+  { size: "md", color: "white", quantity: 4 },
+  { size: "md", color: "grey", quantity: 7 },
+  { size: "lg", color: "grey", quantity: 3 },
+  { size: "xl", color: "green", quantity: 6 },
+  { size: "xl", color: "white", quantity: 5 },
 ]);
 
-graphic._addImages([
+slim._addImages([
   {
-    black: "https://i.ebayimg.com/images/g/K-kAAOSwE8daYWJo/s-l300.png",
+    white:
+      "https://www.nicepng.com/png/full/587-5878889_-jean-jacket-png-style-nichememe-png.png",
+  },
+  {
+    blue:
+      "https://purepng.com/public/uploads/large/purepng.com-orange-jacketgarmentupper-bodyjacketlighterorange-1421526362216wbbfz.png",
+  },
+  {
+    yellow:
+      "https://purepng.com/public/uploads/large/purepng.com-orange-jacketgarmentupper-bodyjacketlighterorange-1421526362216wbbfz.png",
+  },
+  {
+    green:
+      "https://purepng.com/public/uploads/large/purepng.com-orange-jacketgarmentupper-bodyjacketlighterorange-1421526362216wbbfz.png",
+  },
+  {
+    grey:
+      "https://purepng.com/public/uploads/large/purepng.com-orange-jacketgarmentupper-bodyjacketlighterorange-1421526362216wbbfz.png",
+  },
+]);
+
+//--------------------------------------------------------------------------
+// Graphic
+
+export const custom = new Sweaters("Custom", 34, [
+  { size: "xs", color: "white", quantity: 5 },
+  { size: "xs", color: "blue", quantity: 2 },
+  { size: "xs", color: "grey", quantity: 8 },
+  { size: "sm", color: "grey", quantity: 6 },
+  { size: "sm", color: "yellow", quantity: 3 },
+  { size: "sm", color: "green", quantity: 6 },
+  { size: "sm", color: "white", quantity: 5 },
+  { size: "md", color: "yellow", quantity: 5 },
+  { size: "md", color: "white", quantity: 4 },
+  { size: "md", color: "grey", quantity: 7 },
+  { size: "lg", color: "grey", quantity: 3 },
+  { size: "lg", color: "white", quantity: 10 },
+  { size: "lg", color: "green", quantity: 5 },
+  { size: "xl", color: "white", quantity: 3 },
+  { size: "xl", color: "grey", quantity: 3 },
+  { size: "xl", color: "blue", quantity: 3 },
+]);
+
+custom._addImages([
+  {
+    white:
+      "https://www.nicepng.com/png/full/587-5878889_-jean-jacket-png-style-nichememe-png.png",
+  },
+  {
+    blue:
+      "https://purepng.com/public/uploads/large/purepng.com-orange-jacketgarmentupper-bodyjacketlighterorange-1421526362216wbbfz.png",
+  },
+  {
+    yellow:
+      "https://purepng.com/public/uploads/large/purepng.com-orange-jacketgarmentupper-bodyjacketlighterorange-1421526362216wbbfz.png",
+  },
+  {
+    green:
+      "https://purepng.com/public/uploads/large/purepng.com-orange-jacketgarmentupper-bodyjacketlighterorange-1421526362216wbbfz.png",
+  },
+  {
+    grey:
+      "https://purepng.com/public/uploads/large/purepng.com-orange-jacketgarmentupper-bodyjacketlighterorange-1421526362216wbbfz.png",
   },
 ]);

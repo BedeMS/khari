@@ -21,8 +21,8 @@ if (module.hot) {
 // tShirts._addProducts([{ size: "xs", color: "red", quantity: 2 }]);
 
 const init = function () {
-  console.log(hoodies.comfort, hoodies.custom, hoodies.graphic);
-  console.log(jackets.comfort, jackets.custom, jackets.graphic);
+  // console.log(hoodies.comfort, hoodies.custom, hoodies.graphic);
+  // console.log(jackets.comfort, jackets.custom, jackets.graphic);
 };
 
 init();
