@@ -1,7 +1,8 @@
 import navigation from "./views/navigation";
 import header from "./views/Gender/header";
 import { TShirts } from "./products/products";
-import {comfort, custom, graphic } from "./products/categories/hoodies";
+import * as hoodies from "./products/categories/hoodies";
+import * as jackets from "./products/categories/jackets";
 
 if (module.hot) {
   module.hot.accept();
@@ -20,7 +21,8 @@ if (module.hot) {
 // tShirts._addProducts([{ size: "xs", color: "red", quantity: 2 }]);
 
 const init = function () {
-  console.log(comfort, custom, graphic);
+  console.log(hoodies.comfort, hoodies.custom, hoodies.graphic);
+  console.log(jackets.comfort, jackets.custom, jackets.graphic);
 };
 
 init();
