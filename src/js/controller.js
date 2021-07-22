@@ -16,7 +16,7 @@ const init = function () {
   // console.log(jackets.comfort, jackets.custom, jackets.graphic);
   // console.log(sweaters.comfort, sweaters.custom, sweaters.slim);
   // console.log(shorts.regular, shorts.long);
-  // console.log(tshirts.crew, tshirts.vNeck);
+  console.log(tshirts.crew, tshirts.vNeck);
 };
 
 init();

@@ -47,6 +47,12 @@ class Product {
     arr.forEach((img) => {
       this.images = { ...this.images, ...img };
     });
+    this._makeCategoryImage();
+  }
+
+  _makeCategoryImage() {
+    if (this.categoryImage) return;
+    this.categoryImage = Object.values(this.images)[0];
   }
 
   _calcQuantity(newAmount) {

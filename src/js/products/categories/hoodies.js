@@ -12,6 +12,7 @@ export const comfort = new Hoodies("Comfort", 23, [
 ]);
 
 comfort._addImages([
+  // The first image is going to be the Category Image
   {
     blue:
       "https://ramptshirts.com/assets/images/samples/standard-hoodies/royal-blue.png",
