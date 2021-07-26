@@ -120,3 +120,6 @@ custom._addImages([
       "https://purepng.com/public/uploads/large/purepng.com-orange-jacketgarmentupper-bodyjacketlighterorange-1421526362216wbbfz.png",
   },
 ]);
+
+
+export default [custom, graphic, comfort];

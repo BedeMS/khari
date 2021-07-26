@@ -135,3 +135,5 @@ custom._addImages([
       "https://ramptshirts.com/assets/images/samples/standard-hoodies/light-grey.png",
   },
 ]);
+
+export default [custom, graphic, comfort];

@@ -41,3 +41,5 @@ long._addImages([
     black: "https://i.ebayimg.com/images/g/K-kAAOSwE8daYWJo/s-l300.png",
   },
 ]);
+
+export default [regular, long];
