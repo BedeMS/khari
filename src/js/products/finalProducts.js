@@ -4,10 +4,10 @@ import shorts from "./categories/shorts";
 import sweaters from "./categories/sweaters";
 import tshirts from "./categories/tshirts";
 
-export const products = {
-  hoodies,
-  jackets,
-  shorts,
-  sweaters,
+export default products = {
   tshirts,
+  hoodies,
+  sweaters,
+  shorts,
+  jackets,
 };
