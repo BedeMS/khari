@@ -4,20 +4,41 @@ let state = {};
 
 export const updateState = (name, item) => {
   // get current state
-  state = JSON.parse(getLocalStorage("state"));
+  state = getLocalStorage("state");
   // update state object
   state = { ...state, [name]: item };
-  
+
   return state;
 };
 
 export const setLocalStorage = (name, data = "") =>
   localStorage.setItem(name, JSON.stringify(data));
 
-const getLocalStorage = function (name) {
-  return localStorage.getItem(name);
+function getLocalStorage (name) {
+  return JSON.parse(localStorage.getItem(name));
 };
 
+// Get selections based on state
+export const getSelections = () => {
+  state = getLocalStorage("state");
+
+  // get product based on current gender
+  let currentProducts = state.gender === "man" ? products[0] : products[1];
+
+  // Loop through products and find the right category
+  let selections;
+  for(let property in currentProducts) {
+    if(currentProducts[property][0].category === state.category){
+      selections = currentProducts[property]
+    }
+  }
+
+  selections = selections.map(item => {
+    return {name: item.name, image: item.categoryImage}
+  });
+
+  return selections;
+};
 
 // Gets categories based on page, female or male.
 export const getCategories = (gender) => {
@@ -47,9 +68,7 @@ export const getCategories = (gender) => {
   return categories;
 };
 
+// const init = function () {
+// };
 
-const init = function(){
-  setLocalStorage("state");
-}
-
-init();
+// init();

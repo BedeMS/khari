@@ -1,17 +1,17 @@
-import View from "../View";
+// import View from "../View";
 
-class features extends View {
-  _parentElement = document.querySelector(".featured");
-  _featuredMainBtn = document.querySelector(".featured__main-btn");
+// class features extends View {
+//   _parentElement = document.querySelector(".featured");
+//   _featuredMainBtn = document.querySelector(".featured__main-btn");
 
-  constructor() {
-    super();
-  }
+//   constructor() {
+//     super();
+//   }
 
-  // links for featured section
-  initRender(){
-      this._featuredMainBtn.href
-  }
-}
+//   // links for featured section
+//   initRender(){
+//       this._featuredMainBtn.href
+//   }
+// }
 
-export default new features();
+// export default new features();

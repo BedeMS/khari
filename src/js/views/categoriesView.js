@@ -6,8 +6,6 @@ class CategoriesView extends View {
   addHandler(handler) {
     document.addEventListener("click", (e) => {
       if (e.target.classList.contains("category__title")) {
-        e.preventDefault();
-        console.log(e.target.id);
         handler(e.target.id)
       }
     });
