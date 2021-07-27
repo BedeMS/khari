@@ -3,6 +3,14 @@ import View from "./View";
 class SelectionsView extends View {
   _parentElement = document.querySelector(".selections");
 
+  addProductHandler(handler){
+    document.addEventListener("click", e => {
+      if(e.target.classList.contains("select__title")){
+        // e.preventDefault();
+        handler(e.target.textContent);
+      }
+    })
+  }
 
   _createMarkUp() {
     return this._data
@@ -10,7 +18,7 @@ class SelectionsView extends View {
         return `
             <div class="select" id="${selection.name}">
                 <img
-                    src="${selection.image}"
+                    src="${selection.categoryImage}"
                     alt="${selection.name}"
                     class="select__img"
                 />

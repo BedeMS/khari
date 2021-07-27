@@ -13,7 +13,7 @@ class HeaderView extends View {
   _createMarkUp() {
     return `
         <a
-        href="woman.html"
+        href="${this._data.gender}.html"
         aria-label="View ${this._data.gender} Clothe"
         class="header__menu-item header-active"
         >${capitalizeFirstLetter(this._data.gender)}</a

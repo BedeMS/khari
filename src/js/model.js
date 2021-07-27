@@ -18,6 +18,19 @@ export function getLocalStorage (name) {
   return JSON.parse(localStorage.getItem(name));
 };
 
+export const getProducts = () => {
+  state = getLocalStorage("state");
+
+  // get the current selection based on state
+  let selections = getSelections();
+
+  let currentProduct = selections.filter(item => item.name === state.product);
+
+  return currentProduct;
+};
+
+
+
 // Get selections based on state
 export const getSelections = () => {
   state = getLocalStorage("state");
@@ -33,9 +46,9 @@ export const getSelections = () => {
     }
   }
 
-  selections = selections.map(item => {
-    return {name: item.name, image: item.categoryImage}
-  });
+  // selections = selections.map(item => {
+  //   return {name: item.name, image: item.categoryImage}
+  // });
 
   return selections;
 };
