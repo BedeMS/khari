@@ -1,9 +1,9 @@
 import navigation from "./views/navigation";
-import header from "./views/Gender/header";
+import headerView from "./views/header";
 import * as model from "./model";
 import categoriesView from "./views/categoriesView";
 import selectionsView from "./views/selectionsView";
-import selectionsHeaderView from "./views/selectionsHeaderView";
+
 
 if (module.hot) {
   module.hot.accept();
@@ -36,7 +36,7 @@ const controlCategory = function (categoryName) {
 const controlSelections = function () {
   // Render Correct Header from state
   let { gender, category } = model.getLocalStorage("state");
-  selectionsHeaderView.render({ gender, category });
+  headerView.render({ gender, category });
 
   // Get current selections
   let selections = model.getSelections();
