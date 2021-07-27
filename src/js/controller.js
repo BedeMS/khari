@@ -3,6 +3,7 @@ import header from "./views/Gender/header";
 import * as model from "./model";
 import categoriesView from "./views/categoriesView";
 import selectionsView from "./views/selectionsView";
+import selectionsHeaderView from "./views/selectionsHeaderView";
 
 if (module.hot) {
   module.hot.accept();
@@ -33,13 +34,14 @@ const controlCategory = function (categoryName) {
 
 // Renders Selections based on the current Category in state
 const controlSelections = function () {
+  // Render Correct Header from state
+  let { gender, category } = model.getLocalStorage("state");
+  selectionsHeaderView.render({ gender, category });
+
   // Get current selections
   let selections = model.getSelections();
   // Render Selection on page load;
   selectionsView.render(selections);
-
-  
-
 };
 
 const init = function () {

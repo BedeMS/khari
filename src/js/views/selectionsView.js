@@ -3,6 +3,7 @@ import View from "./View";
 class SelectionsView extends View {
   _parentElement = document.querySelector(".selections");
 
+
   _createMarkUp() {
     return this._data
       .map((selection) => {

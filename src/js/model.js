@@ -14,7 +14,7 @@ export const updateState = (name, item) => {
 export const setLocalStorage = (name, data = "") =>
   localStorage.setItem(name, JSON.stringify(data));
 
-function getLocalStorage (name) {
+export function getLocalStorage (name) {
   return JSON.parse(localStorage.getItem(name));
 };
 

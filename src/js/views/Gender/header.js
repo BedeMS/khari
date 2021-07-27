@@ -16,6 +16,8 @@ class header extends View {
       this._headerWoman.classList.add("header-active");
     }
   }
+
+  
 }
 
 export default new header();
