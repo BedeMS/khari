@@ -1,10 +1,11 @@
 import View from "../View";
+import { checkObjEmpty } from "../../utils";
 
 class ProductView extends View {
   _parentElement = document.querySelector(".product-main");
 
   _createMarkUp() {
-      let data = this._data;
+    let data = this._data;
     return `
         <div class="product__desc">
         <h1 class="product__desc-title">${data.name}</h1>
@@ -21,45 +22,84 @@ class ProductView extends View {
         <div class="product__desc-images">
           <img
             class="desc__image"
-            alt="***Product Photo"
-            src="./src/assets/img/t-shirt.png"
+            alt="${data.category} ${data.name}"
+            src="${data.categoryImage}"
           />
         </div>
       </div>
       <div class="product__img">
         <img
           class="product__img-image"
-          alt="***Product Photo"
-          src="${data.images.black}"
+          alt="${data.category} ${data.name}"
+          src="${data.categoryImage}"
         />
       </div>
       <div class="product__pref">
         <div class="product__sizes">
           <label class="product__pref-title">Sizes</label>
           <div class="sizes">
-            <button class="sizes__btn">XS</button>
-            <button class="sizes__btn">SM</button>
-            <button class="sizes__btn">MD</button>
-            <button class="sizes__btn">LG</button>
+          ${this._renderSizes()
+            .map((size, ind) => {
+              return `<button aria-label="${size}" class="sizes__btn ${
+                ind === 0 ? "size-active" : ""
+              }">${size}</button>`;
+            })
+            .join("")}
           </div>
         </div>
         <div class="product__colors">
           <label class="product__pref-title">Colors</label>
           <div class="colors">
-            <button aria-label="**Name Of Color" class="colors__btn"></button>
-            <button aria-label="**Name Of Color" class="colors__btn"></button>
-            <button aria-label="**Name Of Color" class="colors__btn"></button>
-            <button aria-label="**Name Of Color" class="colors__btn"></button>
-            <button aria-label="**Name Of Color" class="colors__btn"></button>
-            <button aria-label="**Name Of Color" class="colors__btn"></button>
+          ${this._renderColors()
+            .map((color, ind) => {
+              return `
+            <button aria-label="${data.category} ${
+                data.name
+              } ${color}" style="background-color:${color}" class="colors__btn  ${
+                ind === 0 ? "color-active" : ""
+              }"></button>
+            `;
+            })
+            .join("")}
           </div>
-        </div>
+        </div> 
         <div class="product__quantity">
           <label class="product__pref-title">Quantity</label>
           <input type="number" class="quantity" min="1" />
         </div>
         <button type="button" class="btn add-to-cart">Add To Cart</button>
         `;
+  }
+
+  _renderSizes() {
+    let sizes = [];
+    for (let property in this._data.sizes) {
+      // if obj is not empty, meaning there are contents in the size.
+      if (!checkObjEmpty(this._data.sizes[property])) {
+        sizes.push(property.toUpperCase());
+      }
+    }
+    return sizes;
+  }
+
+  // get the first size that's not empty and render that sizes colors.
+  _renderColors() {
+    let colors = [];
+    // find the first size
+    for (let property in this._data.sizes) {
+      // if obj is not empty, meaning there are contents in the size.
+      if (!checkObjEmpty(this._data.sizes[property])) {
+        colors.push(this._data.sizes[property]);
+      }
+    }
+
+    // the final set that we want;
+    let color = [];
+    for (let property in colors[0]) {
+      color.push(property);
+    }
+
+    return color;
   }
 }
 
