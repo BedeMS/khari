@@ -40,9 +40,9 @@ class ProductView extends View {
           <div class="sizes">
           ${this._renderSizes()
             .map((size, ind) => {
-              return `<button aria-label="${size}" class="sizes__btn ${
+              return `<button id="${size}" aria-label="${size}" class="sizes__btn ${
                 ind === 0 ? "size-active" : ""
-              }">${size}</button>`;
+              }">${size.toUpperCase()}</button>`;
             })
             .join("")}
           </div>
@@ -76,7 +76,7 @@ class ProductView extends View {
     for (let property in this._data.sizes) {
       // if obj is not empty, meaning there are contents in the size.
       if (!checkObjEmpty(this._data.sizes[property])) {
-        sizes.push(property.toUpperCase());
+        sizes.push(property);
       }
     }
     return sizes;

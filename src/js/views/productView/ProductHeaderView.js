@@ -5,9 +5,8 @@ class ProductHeaderView extends View {
   _parentElement = document.querySelector(".header__menu");
 
   _createMarkUp() {
-    console.log(this._data);
     return `<a
-          href="woman.html"
+          href="${this._data.gender}.html"
           aria-label="View ${this._data.gender}'s Clothe"
           class="header__menu-item header-active"
           >${capitalizeFirstLetter(this._data.gender)}</a

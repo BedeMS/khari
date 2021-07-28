@@ -5,6 +5,7 @@ import categoriesView from "./views/categoriesView";
 import selectionsView from "./views/selectionsView";
 import productView from "./views/productView/ProductView";
 import productHeaderView from "./views/productView/ProductHeaderView";
+import productSizesView from "./views/productView/ProductSizesView";
 
 if (module.hot) {
   module.hot.accept();
@@ -55,15 +56,21 @@ const controlSelections = function (productName) {
 
 // Render Products based on current state;
 const controlShowProducts = function () {
-  let [product] = model.getProducts();
-  console.log(product);
+  let product = model.getProducts();
   productView.render(product);
   productHeaderView.render(model.getLocalStorage("state"));
 };
 
+// Rendering Correct Product colors and images based on size;
+const controlSizes = function(id){
+  console.log(id)
+};
+
+
 const init = function () {
   categoriesView.addHandler(controlCategory);
   selectionsView.addProductHandler(controlSelections);
+  productSizesView.addProductSizeHandler(controlSizes);
 
   // when man page is clicked, load categories for man
   if (location.pathname === "/man.html") {
