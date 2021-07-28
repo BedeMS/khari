@@ -4,7 +4,7 @@ import * as model from "./model";
 import categoriesView from "./views/categoriesView";
 import selectionsView from "./views/selectionsView";
 import productView from "./views/productView/ProductView";
-
+import productHeaderView from "./views/productView/ProductHeaderView";
 
 if (module.hot) {
   module.hot.accept();
@@ -46,39 +46,38 @@ const controlShowSelections = function () {
 };
 
 // Get Product Name the user picks on the selection page
-const controlSelections = function(productName){
+const controlSelections = function (productName) {
   // update state for current Products
-  let state = model.updateState("product", productName)
+  let state = model.updateState("product", productName);
   // persist data into LocalStorage
   model.setLocalStorage("state", state);
-}
+};
 
 // Render Products based on current state;
-const controlShowProducts = function(){
+const controlShowProducts = function () {
   let [product] = model.getProducts();
   console.log(product);
   productView.render(product);
-}
-
-
+  productHeaderView.render(model.getLocalStorage("state"));
+};
 
 const init = function () {
   categoriesView.addHandler(controlCategory);
-  selectionsView.addProductHandler(controlSelections)
+  selectionsView.addProductHandler(controlSelections);
 
   // when man page is clicked, load categories for man
   if (location.pathname === "/man.html") {
     controlShowCategories("man");
   } else if (location.pathname === "/woman.html") {
     controlShowCategories("woman");
-  };
+  }
 
   if (location.pathname === "/selection.html") {
     // render category selections
     controlShowSelections();
-  };
+  }
 
-  if(location.pathname === "/product.html"){
+  if (location.pathname === "/product.html") {
     controlShowProducts();
   }
 };
