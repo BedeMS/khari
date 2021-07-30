@@ -81,8 +81,6 @@ const controlSizes = function(newSize){
   // Get Colors based on Size.
   let sizeColors = model.getColorsFromSize(newSize);
 
-  console.log(sizeColors)
-
   productColorsView.render(sizeColors);
 
   // Update first color in size in state;

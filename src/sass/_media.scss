@@ -162,6 +162,25 @@
     width: 80%;
     transition: all 0.4s ease-in;
   }
+
+  //ABout page
+  .about {
+    width: 75%;
+    &__box {
+      &-title {
+        @include fontMd;
+      }
+    }
+  }
+
+  // Pop-up
+  .popup {
+    width: 80%;
+
+    &__title {
+      @include fontMd;
+    }
+  }
 }
 
 @media screen and (max-width: 836px) {
@@ -269,11 +288,24 @@
   .categories {
     width: 35%;
   }
+
+  //ABout page
+  .about {
+    width: 95%;
+  }
 }
 
 @media screen and (max-width: 736px) {
   .header__logo {
     display: none;
+  }
+
+  // Pop-up
+  .popup {
+    &__item {
+      min-height: 20rem;
+      flex-direction: column;
+    }
   }
 }
 
@@ -352,6 +384,10 @@
     width: 90%;
     height: 40%;
 
+    &__title {
+      @include fontLg;
+    }
+
     &__img {
       height: auto;
       max-height: 100%;
@@ -369,7 +405,7 @@
     padding: 2rem;
 
     &-title {
-      @include fontXl;
+      @include fontLg;
       width: 100%;
       text-align: center;
     }
@@ -419,6 +455,17 @@
     height: 100%;
     width: 100%;
     margin: unset;
+  }
+
+  // About
+  .about {
+    flex-wrap: unset;
+    flex-direction: column;
+
+    &__box {
+      width: 95%;
+      height: auto;
+    }
   }
 }
 
@@ -487,6 +534,13 @@
     &-remove {
       width: 30%;
       margin-bottom: 1rem;
+    }
+  }
+
+  // Pop-up
+  .popup {
+    &__title {
+      @include fontSm;
     }
   }
 }

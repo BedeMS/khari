@@ -154,8 +154,3 @@ export const getCategories = (gender) => {
 
   return categories;
 };
-
-// const init = function () {
-// };
-
-// init();
