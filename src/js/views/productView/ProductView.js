@@ -72,6 +72,7 @@ class ProductView extends View {
   }
 
   _renderSizes() {
+    // Put the sizes object into an array;
     let sizes = [];
     for (let property in this._data.sizes) {
       // if obj is not empty, meaning there are contents in the size.
@@ -84,6 +85,7 @@ class ProductView extends View {
 
   // get the first size that's not empty and render that sizes colors.
   _renderColors() {
+    //Put all the colors into the array; [{grey,pink}]
     let colors = [];
     // find the first size
     for (let property in this._data.sizes) {
@@ -95,6 +97,7 @@ class ProductView extends View {
 
     // the final set that we want;
     let color = [];
+    // Loop through all the sizes colors and 
     for (let property in colors[0]) {
       color.push(property);
     }

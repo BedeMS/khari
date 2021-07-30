@@ -20,7 +20,7 @@ export function getLocalStorage(name) {
 }
 
 export const getImagebyColor = (color) => {
-  const product = getProducts();
+  const product = getProducts(false);
   const productImage = {
     image: product.images[color],
     name: product.name,
@@ -29,12 +29,16 @@ export const getImagebyColor = (color) => {
   return productImage;
 };
 
-export const getProducts = () => {
+// arg = if arg is set to true, we want to set size and color in our
+// state to the first of their kind in the state. If it's not, we just 
+// want the product details.
+export const getProducts = (arg) => {
   state = getLocalStorage("state");
 
-  // get the current selection based on state
+  // Get the current selection based on state
   let selections = getSelections();
 
+  // Get Current Product
   let [currentProduct] = selections.filter(
     (item) => item.name === state.product
   );
@@ -42,10 +46,12 @@ export const getProducts = () => {
   // only send sizes available with quantity;
   currentProduct.sizes = checkForEmptyObj(currentProduct.sizes);
 
-  // Set size in state and
-  setSize(currentProduct);
-  // Set Color based on color
-  setColor(currentProduct.sizes);
+  if (arg) {
+    // Set size in state and
+    setStateSize(currentProduct);
+    // Set Color based on color
+    setStateColor(currentProduct.sizes);
+  }
 
   return currentProduct;
 };
@@ -62,7 +68,7 @@ const checkForEmptyObj = (obj) => {
   return newObj;
 };
 
-const setSize = (obj) => {
+const setStateSize = (obj) => {
   let size = Object.keys(obj.sizes)[0];
   // set the lowest size to state
   setLocalStorage("state", updateState("size", size));
@@ -70,12 +76,33 @@ const setSize = (obj) => {
   return size;
 };
 
-const setColor = (obj) => {
+const setStateColor = (obj) => {
   let color = Object.keys(Object.values(obj)[0])[0];
   // set the first color in the above size in local storage
   setLocalStorage("state", updateState("color", color));
 
   return color;
+};
+
+// This gets the colors based on the size;
+export const getColorsFromSize = (size) => {
+  let product = getProducts(false);
+
+  let sizeColors = [];
+
+  for (let property in product.sizes) {
+    if (property === size) {
+      sizeColors.push(product.sizes[property]);
+    }
+  }
+
+  let colors = [];
+
+  for (let property in sizeColors[0]) {
+    colors.push(property);
+  }
+
+  return colors;
 };
 
 // Get selections based on state

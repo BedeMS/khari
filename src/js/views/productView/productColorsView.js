@@ -1,14 +1,8 @@
 import View from "../View";
 
 class ProductColorsView extends View {
-  // _parentElement = document.querySelector(".product__img");
-  // constructor(){
-  //   super();
-
-  // }
-
   _setParentElement() {
-    this._parentElement = document.querySelector(".product__img");
+    this._parentElement = document.querySelector(".colors");
   }
 
   addProductColorHandler(handler) {
@@ -25,13 +19,13 @@ class ProductColorsView extends View {
   }
 
   _createMarkUp() {
-    return `
-        <img
-          class="product__img-image"
-          alt="${this._data.category} ${this._data.name}"
-          src="${this._data.image}"
-        />
-    `;
+    return this._data.map((color, ind) => {
+      return `
+      <button aria-label="${color}" id="${color}" style="background-color:${color}" class="colors__btn  ${
+        ind === 0 ? "color-active" : ""
+      }"></button>
+      `;
+    }).join("");
   }
 }
 

@@ -7,6 +7,7 @@ import productView from "./views/productView/ProductView";
 import productHeaderView from "./views/productView/ProductHeaderView";
 import productSizesView from "./views/productView/ProductSizesView";
 import productColorsView from "./views/productView/ProductColorsView";
+import productImageView from "./views/productView/ProductImageView";
 
 if (module.hot) {
   module.hot.accept();
@@ -57,10 +58,13 @@ const controlSelections = function (productName) {
 
 // Render Products based on current state;
 const controlShowProducts = function () {
-  let product = model.getProducts();
+  let product = model.getProducts(true);
+  // Render Product Based on Correct Details;
   productView.render(product);
+  // Set Header Based on State;
   productHeaderView.render(model.getLocalStorage("state"));
   // b/c the elements get rendered in js, we have to set some elements here.
+  productImageView._setParentElement();
   productColorsView._setParentElement();
   
   // set the correct image based on first color
@@ -70,23 +74,31 @@ const controlShowProducts = function () {
 
 // Rendering Correct Product colors and images based on size;
 const controlSizes = function(newSize){
-  console.log(newSize);
   const state = model.updateState("size", newSize);
   model.setLocalStorage("state", state);
 
   // update image & colors based on size choice 
+  // Get Colors based on Size.
+  let sizeColors = model.getColorsFromSize(newSize);
+
+  console.log(sizeColors)
+
+  productColorsView.render(sizeColors);
+
+  // Update first color in size in state;
+  controlColors(sizeColors[0]);
 };
 
+
 const controlColors = function(newColor){
-  console.log(newColor);
   // update our state
   const state = model.updateState("color", newColor);
   model.setLocalStorage("state", state);
 
   // Get the correct image w/ product name and category
   const colorImage = model.getImagebyColor(newColor);
-  // Render new Image 
-  productColorsView.render(colorImage);
+  // Render new Image based on color
+  productImageView.render(colorImage);
 };
 
 
