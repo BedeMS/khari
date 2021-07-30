@@ -55,7 +55,7 @@ class ProductView extends View {
               return `
             <button aria-label="${data.category} ${
                 data.name
-              } ${color}" style="background-color:${color}" class="colors__btn  ${
+              } ${color}" id="${color}" style="background-color:${color}" class="colors__btn  ${
                 ind === 0 ? "color-active" : ""
               }"></button>
             `;

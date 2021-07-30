@@ -19,6 +19,16 @@ export function getLocalStorage(name) {
   return JSON.parse(localStorage.getItem(name));
 }
 
+export const getImagebyColor = (color) => {
+  const product = getProducts();
+  const productImage = {
+    image: product.images[color],
+    name: product.name,
+    category: product.category,
+  };
+  return productImage;
+};
+
 export const getProducts = () => {
   state = getLocalStorage("state");
 
@@ -30,7 +40,7 @@ export const getProducts = () => {
   );
 
   // only send sizes available with quantity;
-  currentProduct.sizes = checkForEmptySizes(currentProduct.sizes);
+  currentProduct.sizes = checkForEmptyObj(currentProduct.sizes);
 
   // Set size in state and
   setSize(currentProduct);
@@ -41,15 +51,15 @@ export const getProducts = () => {
 };
 
 // check and  only send  the  sizes with item  already in them.
-const checkForEmptySizes = (obj) => {
-  let sizes = {};
+const checkForEmptyObj = (obj) => {
+  let newObj = {};
   for (let property in obj) {
     if (!checkObjEmpty(obj[property])) {
-      sizes[property] = obj[property];
+      newObj[property] = obj[property];
     }
   }
 
-  return sizes;
+  return newObj;
 };
 
 const setSize = (obj) => {

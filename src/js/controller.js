@@ -6,6 +6,7 @@ import selectionsView from "./views/selectionsView";
 import productView from "./views/productView/ProductView";
 import productHeaderView from "./views/productView/ProductHeaderView";
 import productSizesView from "./views/productView/ProductSizesView";
+import productColorsView from "./views/productView/ProductColorsView";
 
 if (module.hot) {
   module.hot.accept();
@@ -59,11 +60,33 @@ const controlShowProducts = function () {
   let product = model.getProducts();
   productView.render(product);
   productHeaderView.render(model.getLocalStorage("state"));
+  // b/c the elements get rendered in js, we have to set some elements here.
+  productColorsView._setParentElement();
+  
+  // set the correct image based on first color
+  controlColors(model.getLocalStorage("state").color);
+
 };
 
 // Rendering Correct Product colors and images based on size;
-const controlSizes = function(id){
-  console.log(id)
+const controlSizes = function(newSize){
+  console.log(newSize);
+  const state = model.updateState("size", newSize);
+  model.setLocalStorage("state", state);
+
+  // update image & colors based on size choice 
+};
+
+const controlColors = function(newColor){
+  console.log(newColor);
+  // update our state
+  const state = model.updateState("color", newColor);
+  model.setLocalStorage("state", state);
+
+  // Get the correct image w/ product name and category
+  const colorImage = model.getImagebyColor(newColor);
+  // Render new Image 
+  productColorsView.render(colorImage);
 };
 
 
@@ -71,7 +94,7 @@ const init = function () {
   categoriesView.addHandler(controlCategory);
   selectionsView.addProductHandler(controlSelections);
   productSizesView.addProductSizeHandler(controlSizes);
-
+  productColorsView.addProductColorHandler(controlColors)
   // when man page is clicked, load categories for man
   if (location.pathname === "/man.html") {
     controlShowCategories("man");
