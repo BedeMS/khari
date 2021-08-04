@@ -169,7 +169,6 @@
 ///Cart amount
 .header__user-cart {
   position: relative;
-  @include border;
 }
 .cart__count {
   position: absolute;
@@ -182,7 +181,7 @@
   width: auto;
   min-height: 3rem;
   height: auto;
-  // padding: .5rem;
+  padding-bottom: .5rem;
   display: flex;
   justify-content: center;
   align-items: center;

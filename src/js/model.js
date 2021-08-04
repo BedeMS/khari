@@ -51,6 +51,8 @@ export const getProducts = (arg) => {
     setStateSize(currentProduct);
     // Set Color based on color
     setStateColor(currentProduct.sizes);
+    // Set Price in state 
+    setLocalStorage("state", updateState("price", currentProduct.price));
   }
 
   return currentProduct;
