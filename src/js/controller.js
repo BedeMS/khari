@@ -8,6 +8,7 @@ import productHeaderView from "./views/productView/ProductHeaderView";
 import productSizesView from "./views/productView/ProductSizesView";
 import productColorsView from "./views/productView/ProductColorsView";
 import productImageView from "./views/productView/ProductImageView";
+import addToCartView from "./views/cartView/addToCartView";
 
 if (module.hot) {
   module.hot.accept();
@@ -100,11 +101,21 @@ const controlColors = function(newColor){
 };
 
 
+//----------------------------------------------------------------
+// Section Cart
+const controlAddToCart = function(quantity){
+  console.log(quantity);
+  // send quantity to model;
+  model.addProductToCart(quantity);
+};
+
 const init = function () {
   categoriesView.addHandler(controlCategory);
   selectionsView.addProductHandler(controlSelections);
   productSizesView.addProductSizeHandler(controlSizes);
   productColorsView.addProductColorHandler(controlColors)
+  addToCartView.addToCartHandler(controlAddToCart);
+
   // when man page is clicked, load categories for man
   if (location.pathname === "/man.html") {
     controlShowCategories("man");

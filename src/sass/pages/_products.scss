@@ -63,10 +63,10 @@
 // Product Image
 .product__img {
   &-image {
-    // height: 90%;
     height: auto;
     width: auto;
     max-width: 100%;
+    max-height: 75%;
   }
 }
 

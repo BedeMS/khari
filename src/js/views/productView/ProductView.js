@@ -65,7 +65,7 @@ class ProductView extends View {
         </div> 
         <div class="product__quantity">
           <label class="product__pref-title">Quantity</label>
-          <input type="number" class="quantity" min="1" />
+          <input type="number" class="quantity" min="1" value="1"/>
         </div>
         <button type="button" class="btn add-to-cart">Add To Cart</button>
         `;

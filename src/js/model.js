@@ -1,5 +1,6 @@
 import products from "./products/finalProducts";
 import { checkObjEmpty } from "./utils";
+import cart from "./Cart";
 
 let state = {};
 
@@ -30,7 +31,7 @@ export const getImagebyColor = (color) => {
 };
 
 // arg = if arg is set to true, we want to set size and color in our
-// state to the first of their kind in the state. If it's not, we just 
+// state to the first of their kind in the state. If it's not, we just
 // want the product details.
 export const getProducts = (arg) => {
   state = getLocalStorage("state");
@@ -51,8 +52,11 @@ export const getProducts = (arg) => {
     setStateSize(currentProduct);
     // Set Color based on color
     setStateColor(currentProduct.sizes);
-    // Set Price in state 
+    // Set Price in state
     setLocalStorage("state", updateState("price", currentProduct.price));
+    // Set Item id
+    setLocalStorage("state", updateState("id", currentProduct.id));
+
   }
 
   return currentProduct;
@@ -155,4 +159,17 @@ export const getCategories = (gender) => {
   }
 
   return categories;
+};
+
+// ------------------------------------------------------------------------
+// Cart Related
+
+// console.log(cart._cart);
+export const addProductToCart = function (quantity) {
+  let product = getLocalStorage("state");
+  product.quantity = quantity;
+
+  cart.addProduct(product);
+
+  console.log(cart);
 };
