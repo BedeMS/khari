@@ -61,7 +61,7 @@ class Cart {
   _calculateCartQuantity() {
     let allQuantity = this._cart.map((item) => item.quantity);
 
-    this.cartQuantity = allQuantity.reduce(reducer);
+    this.cartQuantity = allQuantity.length ? allQuantity.reduce(reducer) : null;
 
     return this.cartQuantity;
   }
@@ -70,7 +70,7 @@ class Cart {
   _calculateSubTotal() {
     let allPrices = this._cart.map((item) => item.totalPrice);
 
-    this.cartSubTotal = allPrices.reduce(reducer);
+    this.cartSubTotal = allPrices.length ? allPrices.reduce(reducer) : null;
 
     return this.cartSubTotal;
   }
@@ -79,7 +79,7 @@ class Cart {
   _calculateTax() {
     let subTotal = this.cartSubTotal
       ? this.cartSubTotal
-      : this._calculateTotal();
+      : this._calculateSubTotal();
 
     this.cartTaxes = +(subTotal * this.tax).toFixed(2);
 

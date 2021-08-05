@@ -174,7 +174,8 @@ export const addProductToCart = function (quantity) {
   return cartItems;
 };
 
-
 export const cartItems = function () {
-  return cart.getCalculations();
-}
+  let cartItems = cart.getCalculations();
+
+  return cartItems;
+};
