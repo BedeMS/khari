@@ -171,11 +171,7 @@ export const addProductToCart = function (quantity) {
   // this returns all the cart items; array;
   let cartItems = cart.addProduct(product);
 
-  let cartSubTotal = cart.cartTotal;
+  console.log(cartItems);
 
-  let cartTax = +(cartSubTotal * cart.cartTaxes).toFixed(2);
-
-  let cartTotal = cartSubTotal + cartTax;
-
-  return { cartItems, cartSubTotal, cartTax, cartTotal };
+  // return { cartItems, cartSubTotal, cartTax, cartTotal };
 };

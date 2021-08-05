@@ -4,9 +4,11 @@ class Cart {
   _cart = JSON.parse(localStorage.getItem("cart"))
     ? JSON.parse(localStorage.getItem("cart"))
     : [];
-  cartTotal = null;
+  cartSubTotal = null;
   cartShipping = null;
-  cartTaxes = 0.14;
+  tax = 0.14;
+  cartTaxes = null;
+  cartTotal = null;
 
   // 1. Add Product to Cart
   // Product should be an object; = { size: "xs", color: "red", price: 20, etc... }
@@ -32,9 +34,17 @@ class Cart {
       this._cart.push(product);
     }
 
-    this._calculateTotal();
+    this._calculateSubTotal();
+    this._calculateTax();
+    this._calculateFinalPrice();
     localStorage.setItem("cart", JSON.stringify(this._cart));
-    return this._cart;
+
+    return {
+      cart: this._cart,
+      cartSubTotal: this.cartSubTotal,
+      cartTaxes: this.cartTaxes,
+      cartTotal: this.cartTotal,
+    };
   }
 
   // if cart has the product already or not;
@@ -54,17 +64,33 @@ class Cart {
   // 3. Update Cart from Quantity
 
   // 4. Calculate Total
-  _calculateTotal() {
+  _calculateSubTotal() {
     let allPrices = this._cart.map((item) => item.totalPrice);
 
-    this.cartTotal = allPrices.reduce(reducer);
+    this.cartSubTotal = allPrices.reduce(reducer);
 
-    return this._cartTotal;
+    return this.cartSubTotal;
   }
 
-  // 5. Calculate Shipping Amount
+  // 5. Calculate Taxes
+  _calculateTax() {
+    let subTotal = this.cartSubTotal
+      ? this.cartSubTotal
+      : this._calculateTotal();
 
-  // 6. Calculate Taxes
+    this.cartTaxes = +(subTotal * this.tax).toFixed(2);
+
+    return this.cartTaxes;
+  }
+
+  // 6. Calculate Shipping Amount
+
+  // 7. Calculate Final price
+  _calculateFinalPrice() {
+    this.cartTotal = this.cartSubTotal + this.cartTaxes;
+
+    return this.cartTotal;
+  }
 }
 
 export default new Cart();
