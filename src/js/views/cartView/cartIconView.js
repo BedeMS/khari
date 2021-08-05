@@ -3,6 +3,7 @@ import View from "../View";
 class CartIconView extends View {
   _parentElement = document.querySelector(".header__user-cart");
   _createMarkUp() {
+    
     return `
         ${
           this._data.amountOfItems

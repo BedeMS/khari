@@ -10,6 +10,7 @@ import productColorsView from "./views/productView/ProductColorsView";
 import productImageView from "./views/productView/ProductImageView";
 import addToCartView from "./views/cartView/addToCartView";
 import cartIconView from "./views/cartView/cartIconView";
+import cartItemsView from "./views/cartView/cartItemsView";
 
 if (module.hot) {
   module.hot.accept();
@@ -111,6 +112,16 @@ const controlAddToCart = function (quantity) {
   cartIconView.render(cartItems);
 };
 
+/// Show Cart Items on page load
+const controlShowCart = function(){
+  let cartItems = model.cartItems();
+
+  console.log(cartItems);
+  
+  cartItemsView.render(cartItems);
+}
+
+
 const init = function () {
   categoriesView.addHandler(controlCategory);
   selectionsView.addProductHandler(controlSelections);
@@ -118,8 +129,12 @@ const init = function () {
   productColorsView.addProductColorHandler(controlColors);
   addToCartView.addToCartHandler(controlAddToCart);
 
-  // render cart quantity 
+  // render cart quantity
   cartIconView.render(model.cartItems());
+
+  if(location.pathname === "/cart.html"){
+    controlShowCart();
+  }
 
   // when man page is clicked, load categories for man
   if (location.pathname === "/man.html") {

@@ -2,7 +2,7 @@ export default class View {
   _data;
   render(data) {
     // if (!data) return;
-    // if (!this._parentElement) return;
+    if (!this._parentElement) return;
     this._data = data;
     const markup = this._createMarkUp();
 
