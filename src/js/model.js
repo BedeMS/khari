@@ -56,7 +56,6 @@ export const getProducts = (arg) => {
     setLocalStorage("state", updateState("price", currentProduct.price));
     // Set Item id
     setLocalStorage("state", updateState("id", currentProduct.id));
-
   }
 
   return currentProduct;
@@ -169,7 +168,14 @@ export const addProductToCart = function (quantity) {
   let product = getLocalStorage("state");
   product.quantity = quantity;
 
-  cart.addProduct(product);
+  // this returns all the cart items; array;
+  let cartItems = cart.addProduct(product);
 
-  console.log(cart);
+  let cartSubTotal = cart.cartTotal;
+
+  let cartTax = +(cartSubTotal * cart.cartTaxes).toFixed(2);
+
+  let cartTotal = cartSubTotal + cartTax;
+
+  return { cartItems, cartSubTotal, cartTax, cartTotal };
 };
