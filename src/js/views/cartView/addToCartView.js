@@ -12,6 +12,9 @@ class AddToCartView {
 
         // send with handler
           handler(quantity);
+
+        // reset value
+          this._productQuantity.value = 1;
       }
 
     });

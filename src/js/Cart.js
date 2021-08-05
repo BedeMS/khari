@@ -9,6 +9,7 @@ class Cart {
   tax = 0.14;
   cartTaxes = null;
   cartTotal = null;
+  cartQuantity = null;
 
   // 1. Add Product to Cart
   // Product should be an object; = { size: "xs", color: "red", price: 20, etc... }
@@ -34,17 +35,10 @@ class Cart {
       this._cart.push(product);
     }
 
-    this._calculateSubTotal();
-    this._calculateTax();
-    this._calculateFinalPrice();
+    let allPrices = this.getCalculations();
     localStorage.setItem("cart", JSON.stringify(this._cart));
 
-    return {
-      cart: this._cart,
-      cartSubTotal: this.cartSubTotal,
-      cartTaxes: this.cartTaxes,
-      cartTotal: this.cartTotal,
-    };
+    return allPrices;
   }
 
   // if cart has the product already or not;
@@ -62,6 +56,15 @@ class Cart {
   // 2. Remove Product from Cart
 
   // 3. Update Cart from Quantity
+
+  // 4. total Cart quantity Total quantity
+  _calculateCartQuantity() {
+    let allQuantity = this._cart.map((item) => item.quantity);
+
+    this.cartQuantity = allQuantity.reduce(reducer);
+
+    return this.cartQuantity;
+  }
 
   // 4. Calculate Total
   _calculateSubTotal() {
@@ -90,6 +93,21 @@ class Cart {
     this.cartTotal = this.cartSubTotal + this.cartTaxes;
 
     return this.cartTotal;
+  }
+
+  getCalculations() {
+    this._calculateSubTotal();
+    this._calculateTax();
+    this._calculateFinalPrice();
+    this._calculateCartQuantity();
+
+    return {
+      cart: this._cart,
+      cartSubTotal: this.cartSubTotal,
+      cartTaxes: this.cartTaxes,
+      cartTotal: this.cartTotal,
+      amountOfItems: this.cartQuantity,
+    };
   }
 }
 

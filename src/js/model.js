@@ -171,7 +171,10 @@ export const addProductToCart = function (quantity) {
   // this returns all the cart items; array;
   let cartItems = cart.addProduct(product);
 
-  console.log(cartItems);
-
-  // return { cartItems, cartSubTotal, cartTax, cartTotal };
+  return cartItems;
 };
+
+
+export const cartItems = function () {
+  return cart.getCalculations();
+}

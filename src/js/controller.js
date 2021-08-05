@@ -9,6 +9,7 @@ import productSizesView from "./views/productView/ProductSizesView";
 import productColorsView from "./views/productView/ProductColorsView";
 import productImageView from "./views/productView/ProductImageView";
 import addToCartView from "./views/cartView/addToCartView";
+import cartIconView from "./views/cartView/cartIconView";
 
 if (module.hot) {
   module.hot.accept();
@@ -67,18 +68,17 @@ const controlShowProducts = function () {
   // b/c the elements get rendered in js, we have to set some elements here.
   productImageView._setParentElement();
   productColorsView._setParentElement();
-  
+
   // set the correct image based on first color
   controlColors(model.getLocalStorage("state").color);
-
 };
 
 // Rendering Correct Product colors and images based on size;
-const controlSizes = function(newSize){
+const controlSizes = function (newSize) {
   const state = model.updateState("size", newSize);
   model.setLocalStorage("state", state);
 
-  // update image & colors based on size choice 
+  // update image & colors based on size choice
   // Get Colors based on Size.
   let sizeColors = model.getColorsFromSize(newSize);
 
@@ -88,8 +88,7 @@ const controlSizes = function(newSize){
   controlColors(sizeColors[0]);
 };
 
-
-const controlColors = function(newColor){
+const controlColors = function (newColor) {
   // update our state
   const state = model.updateState("color", newColor);
   model.setLocalStorage("state", state);
@@ -100,21 +99,27 @@ const controlColors = function(newColor){
   productImageView.render(colorImage);
 };
 
-
 //----------------------------------------------------------------
 // Section Cart
-const controlAddToCart = function(quantity){
+const controlAddToCart = function (quantity) {
   console.log(quantity);
   // send quantity to model;
-  model.addProductToCart(quantity);
+  let cartItems = model.addProductToCart(quantity);
+
+  console.log(cartItems);
+
+  cartIconView.render(cartItems);
 };
 
 const init = function () {
   categoriesView.addHandler(controlCategory);
   selectionsView.addProductHandler(controlSelections);
   productSizesView.addProductSizeHandler(controlSizes);
-  productColorsView.addProductColorHandler(controlColors)
+  productColorsView.addProductColorHandler(controlColors);
   addToCartView.addToCartHandler(controlAddToCart);
+
+  // render cart quantity 
+  cartIconView.render(model.cartItems());
 
   // when man page is clicked, load categories for man
   if (location.pathname === "/man.html") {

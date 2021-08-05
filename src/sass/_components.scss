@@ -175,9 +175,9 @@
   top: -40%;
   left: -30%;
   transform: translate(-30%, -40%);
-  @include fontMd;
+  @include fontSm;
   border-radius: 50px;
-  min-width: 3rem;
+  min-width: 4rem;
   width: auto;
   min-height: 3rem;
   height: auto;
@@ -185,6 +185,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $color-light-3;
-  color: $color-light-1;
+  background-color: $color-light-2;
+  color: $color-dark-1;
 }
