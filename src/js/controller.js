@@ -11,6 +11,7 @@ import productImageView from "./views/productView/ProductImageView";
 import addToCartView from "./views/cartView/addToCartView";
 import cartIconView from "./views/cartView/cartIconView";
 import cartItemsView from "./views/cartView/cartItemsView";
+import cartQuantityView from "./views/cartView/cartQuantityView";
 
 if (module.hot) {
   module.hot.accept();
@@ -103,33 +104,35 @@ const controlColors = function (newColor) {
 //----------------------------------------------------------------
 // Section Cart
 const controlAddToCart = function (quantity) {
-  console.log(quantity);
   // send quantity to model;
   let cartItems = model.addProductToCart(quantity);
-
-  console.log(cartItems);
 
   cartIconView.render(cartItems);
 };
 
 /// Show Cart Items on page load
-const controlShowCart = function(){
+const controlShowCart = function () {
   let cartItems = model.cartItems();
 
   console.log(cartItems);
-  
-  cartItemsView.render(cartItems);
-}
 
-const controlCartLink = function(product){
+  cartItemsView.render(cartItems);
+};
+
+const controlCartLink = function (product) {
   // Set the correct product in state
   model.setLocalStorage("state", product);
   model.getProducts(true);
-  
+
   // load product page once state has been uploaded
   window.location.assign("/product.html");
 };
 
+const controlQuantity = function (product) {
+  let cartItems = model.changeCartQuantity(product);
+  
+  cartItemsView.render(cartItems);
+};
 
 const init = function () {
   categoriesView.addHandler(controlCategory);
@@ -137,12 +140,13 @@ const init = function () {
   productSizesView.addProductSizeHandler(controlSizes);
   productColorsView.addProductColorHandler(controlColors);
   addToCartView.addToCartHandler(controlAddToCart);
-  cartItemsView.addHandlerCartLink(controlCartLink)
+  cartItemsView.addHandlerCartLink(controlCartLink);
+  cartQuantityView.addHandlerCartQuantity(controlQuantity);
 
   // render cart quantity
   cartIconView.render(model.cartItems());
 
-  if(location.pathname === "/cart.html"){
+  if (location.pathname === "/cart.html") {
     controlShowCart();
   }
 

@@ -36,7 +36,6 @@ class Cart {
     }
 
     let allPrices = this.getCalculations();
-    localStorage.setItem("cart", JSON.stringify(this._cart));
 
     return allPrices;
   }
@@ -56,6 +55,16 @@ class Cart {
   // 2. Remove Product from Cart
 
   // 3. Update Cart from Quantity
+  _updateQuantity({ quantity, productId }) {
+    this._cart.map((item) => {
+      if (productId === item.id) {
+        item.quantity = quantity;
+        item.totalPrice = item.quantity * item.price;
+        return item;
+      }
+      item;
+    });
+  }
 
   // 4. total Cart quantity Total quantity
   _calculateCartQuantity() {
@@ -100,6 +109,7 @@ class Cart {
     this._calculateTax();
     this._calculateFinalPrice();
     this._calculateCartQuantity();
+    localStorage.setItem("cart", JSON.stringify(this._cart));
 
     return {
       cart: this._cart,

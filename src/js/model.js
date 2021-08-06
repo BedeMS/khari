@@ -195,3 +195,10 @@ export const addCartImages = function (itemsArr) {
 
   return cartWithImages;
 };
+
+export const changeCartQuantity = function (product) {
+  cart._updateQuantity(product);
+  let cartItems = cart.getCalculations();
+  cartItems.cart = addCartImages(cartItems.cart);
+  return cartItems;
+};

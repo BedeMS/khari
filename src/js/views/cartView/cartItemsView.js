@@ -34,7 +34,7 @@ class CartItemsView extends View {
     let color = capitalizeFirstLetter(item.color);
     let size = capitalizeFirstLetter(item.size);
     return `
-      <div class="cart__item">
+      <div class="cart__item" id="${item.id}">
         <img
             class="cart__item-img"
             src="${item.itemImage}"
