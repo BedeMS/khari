@@ -3,7 +3,7 @@ import headerView from "./views/header";
 import * as model from "./model";
 import categoriesView from "./views/categoriesView";
 import selectionsView from "./views/selectionsView";
-import productView from "./views/productView/productView";
+import productView from "./views/productView/ProductView";
 import productHeaderView from "./views/productView/productHeaderView";
 import productSizesView from "./views/productView/productSizesView";
 import productColorsView from "./views/productView/productColorsView";
