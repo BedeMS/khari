@@ -202,3 +202,10 @@ export const changeCartQuantity = function (product) {
   cartItems.cart = addCartImages(cartItems.cart);
   return cartItems;
 };
+
+export const removeCartItem = function (itemId) {
+  cart._removeCartItem(itemId);
+  let cartItems = cart.getCalculations();
+  cartItems.cart = addCartImages(cartItems.cart);
+  return cartItems;
+};

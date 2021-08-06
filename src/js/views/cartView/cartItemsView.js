@@ -23,7 +23,7 @@ class CartItemsView extends View {
     return `
         <p class="cart__title">Shopping Cart</p>
         <p class="cart__desc">You have ${
-          this._data.cartQuantity
+          this._data.cartQuantity ? this._data.cartQuantity : "0"
         } items in your cart</p>
         ${this._data.cart.map(this._cartItemMarkUp).join(" ")}
         `;

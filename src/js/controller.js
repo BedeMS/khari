@@ -12,6 +12,7 @@ import addToCartView from "./views/cartView/addToCartView";
 import cartIconView from "./views/cartView/cartIconView";
 import cartItemsView from "./views/cartView/cartItemsView";
 import cartQuantityView from "./views/cartView/cartQuantityView";
+import cartTrashView from "./views/cartView/cartTrashView";
 
 if (module.hot) {
   module.hot.accept();
@@ -130,7 +131,14 @@ const controlCartLink = function (product) {
 
 const controlQuantity = function (product) {
   let cartItems = model.changeCartQuantity(product);
-  
+
+  cartItemsView.render(cartItems);
+};
+
+const controlRemoveCart = function (itemId) {
+  console.log(itemId);
+  let cartItems = model.removeCartItem(itemId);
+
   cartItemsView.render(cartItems);
 };
 
@@ -142,6 +150,7 @@ const init = function () {
   addToCartView.addToCartHandler(controlAddToCart);
   cartItemsView.addHandlerCartLink(controlCartLink);
   cartQuantityView.addHandlerCartQuantity(controlQuantity);
+  cartTrashView.addHandlerCartTrash(controlRemoveCart);
 
   // render cart quantity
   cartIconView.render(model.cartItems());

@@ -53,6 +53,9 @@ class Cart {
   }
 
   // 2. Remove Product from Cart
+  _removeCartItem(itemId) {
+    this._cart = this._cart.filter((item) => item.id !== itemId);
+  }
 
   // 3. Update Cart from Quantity
   _updateQuantity({ quantity, productId }) {
