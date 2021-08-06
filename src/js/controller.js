@@ -5,7 +5,7 @@ import categoriesView from "./views/categoriesView";
 import selectionsView from "./views/selectionsView";
 import productView from "./views/productView/ProductView";
 import productHeaderView from "./views/productView/ProductHeaderView";
-import productSizesView from "./views/productView/productSizesView";
+import productSizesView from "./views/productView/ProductSizesView";
 import productColorsView from "./views/productView/ProductColorsView";
 import productImageView from "./views/productView/ProductImageView";
 import addToCartView from "./views/cartView/addToCartView";
