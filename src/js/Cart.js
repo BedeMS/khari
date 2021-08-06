@@ -58,9 +58,9 @@ class Cart {
   }
 
   // 3. Update Cart from Quantity
-  _updateQuantity({ quantity, productId }) {
+  _updateQuantity({ quantity, productId, color, size }) {
     this._cart.map((item) => {
-      if (productId === item.id) {
+      if (productId === item.id && item.color === color && item.size === size) {
         item.quantity = quantity;
         item.totalPrice = item.quantity * item.price;
         return item;
