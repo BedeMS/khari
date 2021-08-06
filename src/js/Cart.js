@@ -106,7 +106,7 @@ class Cart {
       cartSubTotal: this.cartSubTotal,
       cartTaxes: this.cartTaxes,
       cartTotal: this.cartTotal,
-      amountOfItems: this.cartQuantity,
+      cartQuantity: this.cartQuantity,
     };
   }
 }

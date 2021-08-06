@@ -22,15 +22,15 @@ class CartItemsView extends View {
       <div class="cart__item">
         <img
             class="cart__item-img"
-            src="./src/assets/img/t-shirt.png"
-            alt="***Product Name"
+            src="${item.itemImage}"
+            alt="${item.product} ${item.category}"
         />
         <div class="cart__item-desc">
             <a href="product.html" class="item__title">${item.product} ${item.category}</a>
             <p class="item__desc">${gender} ${color} ${size}</p>
         </div>
         <input min="1" value="${item.quantity}" type="number" class="cart__item-quantity" />
-        <p class="cart__item-price">$${item.price.toFixed(2)}</p>
+        <p class="cart__item-price">$${item.totalPrice.toFixed(2)}</p>
         <button class="cart__item-remove">
             <i class="fas fa-trash"></i>
         </button>

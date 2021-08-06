@@ -1,5 +1,5 @@
 import products from "./products/finalProducts";
-import { checkObjEmpty } from "./utils";
+import { checkObjEmpty, capitalizeFirstLetter } from "./utils";
 import cart from "./Cart";
 
 let state = {};
@@ -111,16 +111,19 @@ export const getColorsFromSize = (size) => {
 };
 
 // Get selections based on state
-export const getSelections = () => {
+export const getSelections = (argGender, argCategory) => {
   state = getLocalStorage("state");
 
   // get product based on current gender
-  let currentProducts = state.gender === "man" ? products[0] : products[1];
+  let gender = argGender ? argGender : state.gender;
+  let category = argCategory ? argCategory : state.category;
+
+  let currentProducts = gender === "man" ? products[0] : products[1];
 
   // Loop through products and find the right category
   let selections;
   for (let property in currentProducts) {
-    if (currentProducts[property][0].category === state.category) {
+    if (currentProducts[property][0].category === category) {
       selections = currentProducts[property];
     }
   }
@@ -176,6 +179,19 @@ export const addProductToCart = function (quantity) {
 
 export const cartItems = function () {
   let cartItems = cart.getCalculations();
-
+  cartItems.cart = addCartImages(cartItems.cart);
   return cartItems;
+};
+
+export const addCartImages = function (itemsArr) {
+  let itemImage;
+
+  let cartWithImages = itemsArr.map((item, ind, arr) => {
+    itemImage = getSelections(item.gender, item.category).filter(
+      (el) => el.name === item.product
+    )[0].images[item.color];
+    return { ...item, itemImage };
+  });
+
+  return cartWithImages;
 };

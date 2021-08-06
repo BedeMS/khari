@@ -6,8 +6,8 @@ class CartIconView extends View {
     
     return `
         ${
-          this._data.amountOfItems
-            ? `<p class="cart__count">${this._data.amountOfItems}</p>`
+          this._data.cartQuantity
+            ? `<p class="cart__count">${this._data.cartQuantity}</p>`
             : ""
         }
         <i class="fas fa-shopping-cart"></i>
