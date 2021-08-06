@@ -121,6 +121,15 @@ const controlShowCart = function(){
   cartItemsView.render(cartItems);
 }
 
+const controlCartLink = function(product){
+  // Set the correct product in state
+  model.setLocalStorage("state", product);
+  model.getProducts(true);
+  
+  // load product page once state has been uploaded
+  window.location.assign("/product.html");
+};
+
 
 const init = function () {
   categoriesView.addHandler(controlCategory);
@@ -128,6 +137,7 @@ const init = function () {
   productSizesView.addProductSizeHandler(controlSizes);
   productColorsView.addProductColorHandler(controlColors);
   addToCartView.addToCartHandler(controlAddToCart);
+  cartItemsView.addHandlerCartLink(controlCartLink)
 
   // render cart quantity
   cartIconView.render(model.cartItems());
