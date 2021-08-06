@@ -53,8 +53,11 @@ class Cart {
   }
 
   // 2. Remove Product from Cart
-  _removeCartItem(itemId) {
-    this._cart = this._cart.filter((item) => item.id !== itemId);
+  _removeCartItem({ itemId, color, size }) {
+    let ind = this._cart.findIndex(
+      (item) => item.id === itemId && item.color === color && item.size === size
+    );
+    this._cart.splice(ind, 1);
   }
 
   // 3. Update Cart from Quantity
