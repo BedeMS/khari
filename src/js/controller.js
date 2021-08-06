@@ -13,6 +13,7 @@ import cartIconView from "./views/cartView/cartIconView";
 import cartItemsView from "./views/cartView/cartItemsView";
 import cartQuantityView from "./views/cartView/cartQuantityView";
 import cartTrashView from "./views/cartView/cartTrashView";
+import checkoutView from "./views/cartView/checkoutView";
 
 if (module.hot) {
   module.hot.accept();
@@ -118,6 +119,7 @@ const controlShowCart = function () {
   console.log(cartItems);
 
   cartItemsView.render(cartItems);
+  checkoutView.render(cartItems);
 };
 
 const controlCartLink = function (product) {
@@ -133,13 +135,15 @@ const controlQuantity = function (product) {
   let cartItems = model.changeCartQuantity(product);
 
   cartItemsView.render(cartItems);
+  checkoutView.render(cartItems);
 };
 
 const controlRemoveCart = function (itemId) {
-  console.log(itemId);
   let cartItems = model.removeCartItem(itemId);
 
   cartItemsView.render(cartItems);
+  checkoutView.render(cartItems);
+
 };
 
 const init = function () {
