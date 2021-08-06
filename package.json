@@ -2,7 +2,7 @@
   "name": "khari",
   "version": "1.0.0",
   "description": "A clothing line dedicated on serving Africans and creating Jobs.",
-  "default": "index.js",
+  "default": "index.html",
   "scripts": {
     "start": "parcel *.html",
     "build": "CI='' parcel build index.html --dist-dir ./dist"
@@ -10,8 +10,9 @@
   "author": "Bede Sahlu",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.0-beta.2",
-    "parcel": "^2.0.0-beta.2",
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "@parcel/transformer-sass": "^2.0.0-beta.1",
+    "parcel": "^2.0.0-beta.1",
     "sass": "^1.32.8"
   },
   "dependencies": {
