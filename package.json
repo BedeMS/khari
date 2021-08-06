@@ -10,11 +10,11 @@
   "author": "Bede Sahlu",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.0-beta.1",
-    "parcel": "^2.0.0-beta.1",
     "sass": "^1.32.8"
   },
   "dependencies": {
+    "@parcel/transformer-sass": "^2.0.0-alpha.3",
+    "parcel": "^2.0.0-rc.0",
     "uni": "0.0.6",
     "uniqid": "^5.3.0",
     "uuid": "^8.3.2"
