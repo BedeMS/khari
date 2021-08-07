@@ -5,8 +5,7 @@
   "default": "index.html",
   "scripts": {
     "start": "parcel *.html",
-    "prod
-    ": "CI='' parcel build index.html --dist-dir ./dist"
+    "prod": "CI='' parcel build index.html --dist-dir ./dist"
   },
   "author": "Bede Sahlu",
   "license": "ISC",
