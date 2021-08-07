@@ -5,7 +5,7 @@
   "default": "index.html",
   "scripts": {
     "start": "parcel *.html",
-    "prod": "parcel build index.html --dist-dir ./dist"
+    "prod": "parcel build *.html --dist-dir ./dist"
   },
   "author": "Bede Sahlu",
   "license": "ISC",
