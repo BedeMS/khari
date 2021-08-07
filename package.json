@@ -2,10 +2,10 @@
   "name": "khari",
   "version": "1.0.0",
   "description": "A clothing line dedicated on serving Africans and creating Jobs.",
-  "main": "controller.js",
+  "default": "index.html",
   "scripts": {
     "start": "parcel *.html",
-    "build": "CI='' parcel build *.html --dist-dir ./dist"
+    "build": "CI='' parcel build index.html --dist-dir ./dist"
   },
   "author": "Bede Sahlu",
   "license": "ISC",
