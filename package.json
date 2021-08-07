@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A clothing line dedicated on serving Africans and creating Jobs.",
   "default": "index.html",
+  
   "scripts": {
     "start": "parcel *.html",
     "prod": "CI='' parcel build index.html --dist-dir ./dist"
