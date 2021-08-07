@@ -5,7 +5,7 @@
   "default": "controller.js",
   "scripts": {
     "start": "parcel *.html",
-    "prod": "parcel build *.html --dist-dir ./dist"
+    "prod": "CI='' parcel build *.html --dist-dir ./dist"
   },
   "author": "Bede Sahlu",
   "license": "ISC",
