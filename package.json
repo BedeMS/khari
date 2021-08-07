@@ -2,7 +2,7 @@
   "name": "khari",
   "version": "1.0.0",
   "description": "A clothing line dedicated on serving Africans and creating Jobs.",
-  "default": "index.html",
+  "default": "controller.js",
   "scripts": {
     "start": "parcel *.html",
     "prod": "parcel build *.html --dist-dir ./dist"
